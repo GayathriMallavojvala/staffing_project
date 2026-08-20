@@ -30,8 +30,11 @@ this that these those it its into your you we our their his her they i he she th
 will can could should would may might must shall not no do does did doing have has had
 looking strong candidate plus years experienced skilled proficient knowledge understanding
 excellent good great ability strong good working across various including etc using use
-job role team company work environment opportunity responsibilities requirements required
+job role team teams company work environment opportunity responsibilities requirements required
 preferred qualifications must nice degree year plus who what where when why how also
+gather collection cleaning fix errors missing run queries patterns hidden trends share
+findings advice command clear explain related field basic non complex sources numbers
+values reporting stakeholders comfortable translating raw actionable business insights
 """.split())
 
 SECTION_KEYWORDS = {
@@ -125,8 +128,11 @@ def extract_keywords(job_description, top_n=20):
     Multi-word technical terms (e.g. "machine learning") are matched against a
     curated phrase list rather than naive adjacent-word pairing, which avoids
     producing meaningless bigrams like "power pandas" from words that just
-    happen to sit next to each other.
+    happen to sit next to each other. We also run the same squished-word fix
+    used for PDF resumes, since job descriptions pasted from certain web pages
+    often lose spaces between sections (e.g. "ResponsibilitiesData").
     """
+    job_description = _fix_squished_words(job_description)
     text_lower = job_description.lower()
 
     # 1. Detect known multi-word phrases first, and remove them from the text
@@ -136,7 +142,15 @@ def extract_keywords(job_description, top_n=20):
         text_lower = text_lower.replace(phrase, " ")
 
     # 2. Extract single-word keywords from what remains
-    text_clean = text_lower.translate(str.maketrans("", "", string.punctuation.replace("+", "").replace("#", "")))
+    # Replace punctuation with a SPACE (not delete it) - otherwise sentences
+    # like "field.Soft Skills" (no space after the period, common in text
+    # copied from web pages) get fused into "fieldsoft" once the period is
+    # simply removed.
+    punct_to_space = str.maketrans(
+        string.punctuation.replace("+", "").replace("#", ""),
+        " " * len(string.punctuation.replace("+", "").replace("#", ""))
+    )
+    text_clean = text_lower.translate(punct_to_space)
     words = [w for w in text_clean.split() if w not in STOPWORDS and len(w) > 2]
     freq = Counter(words)
     top_unigrams = [kw for kw, _ in freq.most_common(top_n)]

@@ -1,0 +1,151 @@
+job_id,domain,required_skills,num_required_skills,required_experience,client_type
+J0001,Mobile Development,"Flutter, Java, Kotlin, React Native, Swift",5,3.0,Enterprise
+J0002,Healthcare IT,"FHIR, HIPAA Compliance, Python",3,7.0,Banking
+J0003,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native",5,1.0,Enterprise
+J0004,Banking/Fintech Software,"Core Banking Systems, REST APIs, SQL, Spring Boot",4,7.0,Startup
+J0005,Banking/Fintech Software,"Core Banking Systems, Java, Spring Boot",3,5.0,Enterprise
+J0006,Web Development,"HTML, Node.js, PHP, React",4,3.0,Startup
+J0007,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Python, SQL",5,1.0,Banking
+J0008,Data & ML,"Excel, Pandas, Power BI, SQL, TensorFlow",5,3.0,Enterprise
+J0009,Mobile Development,"Flutter, Java, Kotlin, Objective-C, Swift",5,7.0,Enterprise
+J0010,Data & ML,"Excel, Pandas, Python, SQL",4,3.0,Startup
+J0011,Mobile Development,"Flutter, Java, Objective-C, Swift",4,2.0,Healthcare
+J0012,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs",3,0.5,Banking
+J0013,Data & ML,"Excel, Pandas, TensorFlow",3,1.0,Banking
+J0014,Data & ML,"Excel, Machine Learning, Pandas, Python",4,5.0,Banking
+J0015,Web Development,"HTML, PHP, React",3,1.0,Banking
+J0016,Web Development,"Angular, CSS, Django, PHP",4,2.0,Enterprise
+J0017,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Kubernetes",5,1.0,Enterprise
+J0018,Healthcare IT,"HIPAA Compliance, HL7, Java, Python, SQL",5,0.5,Healthcare
+J0019,Web Development,"Angular, Django, JavaScript, Node.js, PHP",5,5.0,Banking
+J0020,Web Development,"CSS, JavaScript, React",3,0.5,Enterprise
+J0021,Web Development,"Angular, CSS, Django",3,1.0,Healthcare
+J0022,Web Development,"CSS, Django, JavaScript, PHP, React",5,7.0,Banking
+J0023,Data & ML,"Excel, Power BI, Python, SQL, TensorFlow",5,2.0,Enterprise
+J0024,Healthcare IT,"FHIR, HIPAA Compliance, Java",3,3.0,Enterprise
+J0025,Web Development,"Angular, HTML, React",3,2.0,Enterprise
+J0026,Banking/Fintech Software,"REST APIs, SQL, Spring Boot",3,0.5,Healthcare
+J0027,Web Development,"Angular, Django, JavaScript, Node.js, PHP",5,7.0,Enterprise
+J0028,Data & ML,"Excel, Machine Learning, Power BI, SQL, TensorFlow",5,1.0,Startup
+J0029,Cloud & DevOps,"Azure, Kubernetes, Terraform",3,3.0,Enterprise
+J0030,Banking/Fintech Software,"Core Banking Systems, REST APIs, SQL",3,2.0,Startup
+J0031,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, SQL",5,2.0,Startup
+J0032,Healthcare IT,"FHIR, Java, SQL",3,1.0,Startup
+J0033,Healthcare IT,"HL7, Java, Python, SQL",4,5.0,Enterprise
+J0034,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, SQL",5,2.0,Banking
+J0035,Web Development,"CSS, Django, HTML, Node.js, PHP",5,3.0,Startup
+J0036,Mobile Development,"Objective-C, React Native, Swift",3,0.5,Banking
+J0037,Healthcare IT,"FHIR, HL7, SQL",3,0.5,Startup
+J0038,Data & ML,"Power BI, Python, TensorFlow",3,1.0,Healthcare
+J0039,Healthcare IT,"HIPAA Compliance, Java, Python",3,3.0,Healthcare
+J0040,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,2.0,Startup
+J0041,Banking/Fintech Software,"Java, REST APIs, SQL, Spring Boot",4,5.0,Healthcare
+J0042,Banking/Fintech Software,"Core Banking Systems, SQL, Spring Boot",3,1.0,Startup
+J0043,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,7.0,Enterprise
+J0044,Mobile Development,"Flutter, Java, Objective-C, React Native",4,5.0,Banking
+J0045,Data & ML,"Machine Learning, Pandas, Python",3,3.0,Startup
+J0046,Mobile Development,"Flutter, Java, Objective-C, React Native, Swift",5,2.0,Enterprise
+J0047,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python",5,2.0,Startup
+J0048,Data & ML,"Excel, Power BI, TensorFlow",3,2.0,Startup
+J0049,Web Development,"Angular, CSS, Node.js",3,1.0,Healthcare
+J0050,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,0.5,Startup
+J0051,Mobile Development,"Java, Objective-C, React Native, Swift",4,0.5,Startup
+J0052,Mobile Development,"Java, Kotlin, Objective-C, Swift",4,7.0,Banking
+J0053,Web Development,"CSS, Node.js, React",3,2.0,Healthcare
+J0054,Web Development,"HTML, JavaScript, Node.js, PHP, React",5,5.0,Startup
+J0055,Web Development,"Angular, Django, Node.js, PHP, React",5,1.0,Banking
+J0056,Cloud & DevOps,"AWS, Azure, Docker, Terraform",4,3.0,Banking
+J0057,Mobile Development,"Flutter, Java, Objective-C, Swift",4,5.0,Banking
+J0058,Mobile Development,"Flutter, Kotlin, Objective-C, React Native",4,5.0,Healthcare
+J0059,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,0.5,Enterprise
+J0060,Healthcare IT,"HIPAA Compliance, HL7, Java, Python, SQL",5,7.0,Healthcare
+J0061,Cloud & DevOps,"AWS, Azure, CI/CD, Kubernetes, Linux",5,0.5,Enterprise
+J0062,Data & ML,"Excel, Pandas, Power BI, TensorFlow",4,2.0,Startup
+J0063,Web Development,"HTML, Node.js, PHP",3,2.0,Banking
+J0064,Healthcare IT,"HIPAA Compliance, HL7, Java, SQL",4,1.0,Banking
+J0065,Healthcare IT,"HIPAA Compliance, HL7, SQL",3,7.0,Startup
+J0066,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, SQL",5,1.0,Enterprise
+J0067,Data & ML,"Excel, Power BI, Python",3,1.0,Enterprise
+J0068,Mobile Development,"Java, Kotlin, Objective-C, React Native, Swift",5,5.0,Startup
+J0069,Healthcare IT,"FHIR, HL7, Java, SQL",4,3.0,Healthcare
+J0070,Web Development,"Angular, Django, HTML, Node.js",4,3.0,Enterprise
+J0071,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,2.0,Healthcare
+J0072,Data & ML,"Power BI, SQL, TensorFlow",3,2.0,Healthcare
+J0073,Mobile Development,"Flutter, Java, React Native, Swift",4,5.0,Banking
+J0074,Mobile Development,"Flutter, Java, Objective-C",3,3.0,Enterprise
+J0075,Healthcare IT,"HIPAA Compliance, HL7, Java, Python, SQL",5,1.0,Startup
+J0076,Web Development,"Angular, Node.js, React",3,1.0,Enterprise
+J0077,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Terraform",5,7.0,Banking
+J0078,Mobile Development,"Java, Kotlin, Objective-C, React Native, Swift",5,1.0,Healthcare
+J0079,Banking/Fintech Software,"Core Banking Systems, REST APIs, SQL, Spring Boot",4,1.0,Healthcare
+J0080,Web Development,"CSS, Node.js, PHP",3,0.5,Enterprise
+J0081,Cloud & DevOps,"Azure, CI/CD, Docker, Linux, Terraform",5,2.0,Enterprise
+J0082,Data & ML,"Excel, Machine Learning, Pandas, Python",4,3.0,Healthcare
+J0083,Healthcare IT,"HIPAA Compliance, HL7, Java, Python, SQL",5,1.0,Startup
+J0084,Healthcare IT,"HIPAA Compliance, HL7, Java, Python",4,2.0,Banking
+J0085,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,2.0,Startup
+J0086,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL",4,1.0,Startup
+J0087,Data & ML,"Excel, Machine Learning, Pandas, SQL, TensorFlow",5,3.0,Banking
+J0088,Data & ML,"Machine Learning, Python, TensorFlow",3,2.0,Healthcare
+J0089,Banking/Fintech Software,"Core Banking Systems, REST APIs, Spring Boot",3,2.0,Healthcare
+J0090,Mobile Development,"Java, Objective-C, React Native",3,1.0,Enterprise
+J0091,Cloud & DevOps,"AWS, Azure, Kubernetes",3,7.0,Healthcare
+J0092,Web Development,"Angular, CSS, HTML, JavaScript",4,3.0,Healthcare
+J0093,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,2.0,Banking
+J0094,Healthcare IT,"HIPAA Compliance, HL7, SQL",3,0.5,Startup
+J0095,Banking/Fintech Software,"Core Banking Systems, REST APIs, SQL, Spring Boot",4,3.0,Startup
+J0096,Banking/Fintech Software,"Java, REST APIs, SQL, Spring Boot",4,1.0,Enterprise
+J0097,Cloud & DevOps,"CI/CD, Docker, Kubernetes, Linux",4,5.0,Banking
+J0098,Banking/Fintech Software,"Core Banking Systems, Java, Spring Boot",3,0.5,Healthcare
+J0099,Web Development,"Angular, CSS, Node.js, PHP",4,1.0,Healthcare
+J0100,Cloud & DevOps,"AWS, CI/CD, Terraform",3,5.0,Healthcare
+J0101,Data & ML,"Excel, Machine Learning, Pandas, Power BI, Python",5,3.0,Enterprise
+J0102,Data & ML,"Excel, Pandas, Python, SQL, TensorFlow",5,2.0,Healthcare
+J0103,Web Development,"Angular, JavaScript, PHP",3,1.0,Healthcare
+J0104,Mobile Development,"Flutter, Java, Objective-C, Swift",4,1.0,Healthcare
+J0105,Web Development,"Angular, CSS, Django, JavaScript",4,0.5,Enterprise
+J0106,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,5.0,Healthcare
+J0107,Data & ML,"Pandas, Power BI, SQL, TensorFlow",4,3.0,Healthcare
+J0108,Data & ML,"Excel, Power BI, SQL, TensorFlow",4,5.0,Startup
+J0109,Mobile Development,"Flutter, Java, Kotlin, Objective-C, Swift",5,1.0,Healthcare
+J0110,Data & ML,"Excel, Pandas, Python, SQL, TensorFlow",5,2.0,Enterprise
+J0111,Mobile Development,"Flutter, Java, Kotlin, React Native",4,2.0,Banking
+J0112,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs",3,2.0,Enterprise
+J0113,Healthcare IT,"FHIR, HL7, Java",3,2.0,Enterprise
+J0114,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,2.0,Enterprise
+J0115,Data & ML,"Machine Learning, Power BI, TensorFlow",3,7.0,Banking
+J0116,Data & ML,"Excel, Machine Learning, Pandas, SQL",4,2.0,Banking
+J0117,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Linux",5,5.0,Banking
+J0118,Healthcare IT,"HIPAA Compliance, HL7, Java",3,1.0,Banking
+J0119,Data & ML,"Excel, Machine Learning, Pandas, Power BI, SQL",5,1.0,Banking
+J0120,Mobile Development,"Java, Kotlin, React Native, Swift",4,3.0,Enterprise
+J0121,Banking/Fintech Software,"Core Banking Systems, REST APIs, SQL",3,0.5,Enterprise
+J0122,Mobile Development,"Flutter, Java, Kotlin, Objective-C",4,2.0,Startup
+J0123,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,5.0,Enterprise
+J0124,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python",5,7.0,Banking
+J0125,Mobile Development,"Java, Kotlin, Objective-C, Swift",4,1.0,Banking
+J0126,Mobile Development,"Flutter, Java, Kotlin",3,2.0,Healthcare
+J0127,Data & ML,"Excel, Pandas, Python, TensorFlow",4,1.0,Startup
+J0128,Mobile Development,"Flutter, Java, Swift",3,1.0,Enterprise
+J0129,Data & ML,"Excel, Power BI, TensorFlow",3,7.0,Startup
+J0130,Healthcare IT,"FHIR, HL7, Java",3,3.0,Enterprise
+J0131,Data & ML,"Machine Learning, Python, SQL, TensorFlow",4,2.0,Healthcare
+J0132,Web Development,"Angular, CSS, HTML, JavaScript, React",5,1.0,Healthcare
+J0133,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java",4,2.0,Enterprise
+J0134,Cloud & DevOps,"Azure, Docker, Kubernetes, Linux, Terraform",5,3.0,Banking
+J0135,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, SQL",5,0.5,Startup
+J0136,Cloud & DevOps,"Azure, CI/CD, Docker, Kubernetes, Linux",5,1.0,Enterprise
+J0137,Banking/Fintech Software,"Java, REST APIs, SQL",3,2.0,Enterprise
+J0138,Banking/Fintech Software,"Java, REST APIs, SQL, Spring Boot",4,3.0,Startup
+J0139,Web Development,"Angular, Django, JavaScript, PHP, React",5,1.0,Enterprise
+J0140,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,3.0,Banking
+J0141,Data & ML,"Excel, Machine Learning, Python",3,0.5,Enterprise
+J0142,Healthcare IT,"FHIR, HIPAA Compliance, SQL",3,1.0,Enterprise
+J0143,Cloud & DevOps,"AWS, CI/CD, Docker, Linux, Terraform",5,2.0,Startup
+J0144,Web Development,"Django, Node.js, PHP",3,0.5,Startup
+J0145,Web Development,"Django, JavaScript, Node.js, React",4,2.0,Healthcare
+J0146,Banking/Fintech Software,"REST APIs, SQL, Spring Boot",3,0.5,Healthcare
+J0147,Data & ML,"Excel, Power BI, SQL, TensorFlow",4,0.5,Startup
+J0148,Mobile Development,"Java, Objective-C, React Native, Swift",4,2.0,Startup
+J0149,Mobile Development,"Flutter, Java, Objective-C, Swift",4,3.0,Enterprise
+J0150,Banking/Fintech Software,"Java, REST APIs, Spring Boot",3,1.0,Startup

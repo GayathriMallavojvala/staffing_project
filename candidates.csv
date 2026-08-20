@@ -1,0 +1,801 @@
+candidate_id,preferred_domain,skills,num_skills,experience_years,education,has_certification
+C0001,Healthcare IT,"HIPAA Compliance, HL7, Java, Python, SQL",5,4.8,B.Tech,1
+C0002,Mobile Development,"Flutter, Java, Objective-C",3,0.5,B.Tech,0
+C0003,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,1.2,B.Tech,1
+C0004,Banking/Fintech Software,"Java, REST APIs, SQL",3,10.5,B.Sc,0
+C0005,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,14.6,BCA,1
+C0006,Web Development,"JavaScript, Node.js, React",3,1.7,B.Tech,1
+C0007,Cloud & DevOps,"Azure, Docker, Linux, Terraform",4,0.1,Diploma,0
+C0008,Web Development,"CSS, HTML, JavaScript, React",4,4.6,B.Tech,0
+C0009,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Linux, Terraform",6,1.9,B.Sc,1
+C0010,Data & ML,"Machine Learning, Python, TensorFlow",3,0.2,Diploma,1
+C0011,Healthcare IT,"FHIR, HIPAA Compliance, Java, SQL",4,1.5,B.Tech,0
+C0012,Web Development,"CSS, Django, HTML, JavaScript, Node.js, React",6,1.7,B.Tech,0
+C0013,Web Development,"CSS, Django, JavaScript, PHP, React",5,0.6,B.Tech,0
+C0014,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Kubernetes, Linux",6,1.1,M.Tech,0
+C0015,Banking/Fintech Software,"Core Banking Systems, REST APIs, SQL, Spring Boot",4,0.1,B.Sc,0
+C0016,Cloud & DevOps,"Azure, CI/CD, Linux, Terraform",4,6.8,BCA,1
+C0017,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,2.5,M.Tech,1
+C0018,Cloud & DevOps,"AWS, Azure, CI/CD",3,1.5,B.Tech,1
+C0019,Healthcare IT,"FHIR, Java, Python, SQL",4,10.1,BCA,0
+C0020,Healthcare IT,"FHIR, Python, SQL",3,4.9,B.Tech,1
+C0021,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,1.5,B.Tech,0
+C0022,Cloud & DevOps,"AWS, Azure, CI/CD, Kubernetes, Linux",5,3.7,MCA,1
+C0023,Web Development,"CSS, Django, Node.js",3,7.8,BCA,1
+C0024,Mobile Development,"Flutter, Kotlin, Objective-C",3,2.9,B.Tech,0
+C0025,Data & ML,"Excel, Machine Learning, Pandas, Power BI, TensorFlow",5,3.3,BCA,0
+C0026,Web Development,"Angular, CSS, JavaScript, Node.js",4,6.5,M.Tech,0
+C0027,Healthcare IT,"FHIR, HIPAA Compliance, HL7, SQL",4,5.7,MCA,0
+C0028,Mobile Development,"Flutter, Kotlin, Objective-C, Swift",4,2.0,M.Tech,0
+C0029,Mobile Development,"Flutter, Java, Kotlin, Swift",4,1.7,B.Tech,1
+C0030,Banking/Fintech Software,"Java, REST APIs, Spring Boot",3,1.1,M.Tech,1
+C0031,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Linux",5,2.8,M.Tech,0
+C0032,Cloud & DevOps,"AWS, Kubernetes, Terraform",3,0.2,B.Tech,0
+C0033,Cloud & DevOps,"AWS, Azure, Docker, Linux",4,2.9,B.Tech,0
+C0034,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,4.9,B.Tech,1
+C0035,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,1.2,B.Tech,0
+C0036,Cloud & DevOps,"Azure, CI/CD, Kubernetes, Linux",4,0.3,B.Tech,0
+C0037,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot, Terraform",6,1.3,B.Tech,0
+C0038,Data & ML,"Excel, Power BI, Python, SQL, TensorFlow",5,1.6,B.Tech,0
+C0039,Web Development,"Angular, CSS, HTML, JavaScript, PHP, React",6,0.8,B.Tech,0
+C0040,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,3.6,B.Tech,1
+C0041,Banking/Fintech Software,"Core Banking Systems, Excel, Java, REST APIs, SQL, Spring Boot",6,0.9,BCA,1
+C0042,Healthcare IT,"HIPAA Compliance, Java, Python",3,1.0,B.Tech,1
+C0043,Mobile Development,"Flutter, Kotlin, Objective-C, React Native",4,1.6,B.Tech,0
+C0044,Web Development,"JavaScript, PHP, React",3,0.8,B.Tech,0
+C0045,Data & ML,"Excel, Pandas, Power BI, Python, SQL, TensorFlow",6,2.4,BCA,0
+C0046,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,0.8,MCA,0
+C0047,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,12.3,B.Tech,1
+C0048,Data & ML,"Excel, Machine Learning, Pandas, Power BI, Python, TensorFlow",6,5.4,B.Tech,0
+C0049,Web Development,"CSS, Django, React",3,5.9,B.Tech,0
+C0050,Data & ML,"Excel, Pandas, Python, SQL",4,2.2,B.Tech,1
+C0051,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,8.5,B.Tech,0
+C0052,Data & ML,"Excel, Machine Learning, Pandas, Power BI, Python, TensorFlow",6,0.4,B.Tech,0
+C0053,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Terraform",5,2.3,BCA,0
+C0054,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Linux, Terraform",6,5.1,BCA,0
+C0055,Web Development,"CSS, Django, HTML, PHP",4,15.0,Diploma,0
+C0056,Banking/Fintech Software,"Azure, Core Banking Systems, Java, REST APIs, SQL, Spring Boot",6,3.0,B.Tech,0
+C0057,Banking/Fintech Software,"Core Banking Systems, HTML, Java, REST APIs, SQL, Spring Boot",6,5.6,B.Sc,0
+C0058,Healthcare IT,"FHIR, HIPAA Compliance, SQL",3,3.1,B.Tech,0
+C0059,Cloud & DevOps,"Azure, Docker, Kubernetes, Linux",4,3.3,BCA,0
+C0060,Cloud & DevOps,"AWS, Linux, Terraform",3,3.3,B.Tech,0
+C0061,Data & ML,"Excel, Power BI, Python, TensorFlow",4,2.0,M.Tech,1
+C0062,Banking/Fintech Software,"Core Banking Systems, Java, JavaScript, REST APIs, SQL, Spring Boot",6,3.7,B.Tech,0
+C0063,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Kubernetes, Linux",6,1.4,MCA,1
+C0064,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,2.5,B.Tech,0
+C0065,Web Development,"Angular, CSS, Django, JavaScript, PHP",5,0.9,BCA,1
+C0066,Healthcare IT,"FHIR, HIPAA Compliance, Java, Python, SQL",5,6.7,BCA,1
+C0067,Cloud & DevOps,"AWS, Kubernetes, Linux, Terraform",4,3.1,BCA,1
+C0068,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Kubernetes, Linux",6,3.8,B.Tech,0
+C0069,Mobile Development,"Java, Kotlin, Objective-C",3,0.1,Diploma,0
+C0070,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL",4,7.4,B.Tech,0
+C0071,Banking/Fintech Software,"Core Banking Systems, Excel, Java, REST APIs, SQL, Spring Boot",6,1.2,BCA,0
+C0072,Web Development,"Angular, CSS, Django, HTML, JavaScript, PHP",6,5.8,B.Tech,0
+C0073,Mobile Development,"Flutter, Kotlin, Objective-C, React Native, Swift",5,0.9,M.Tech,0
+C0074,Banking/Fintech Software,"Java, REST APIs, SQL, Spring Boot",4,8.3,BCA,0
+C0075,Data & ML,"Excel, Machine Learning, Pandas, Python, SQL, TensorFlow",6,0.7,BCA,0
+C0076,Cloud & DevOps,"AWS, Azure, CI/CD, Kubernetes, Terraform",5,2.2,B.Sc,1
+C0077,Data & ML,"Excel, Pandas, SQL",3,0.4,MCA,0
+C0078,Cloud & DevOps,"AWS, Azure, Docker, Terraform",4,5.0,B.Sc,1
+C0079,Healthcare IT,"FHIR, Python, SQL",3,0.3,B.Tech,1
+C0080,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Kubernetes, Linux",6,3.1,MCA,1
+C0081,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,6.5,B.Tech,0
+C0082,Banking/Fintech Software,"Core Banking Systems, Java, Node.js, REST APIs, SQL, Spring Boot",6,2.6,B.Tech,0
+C0083,Data & ML,"Excel, Machine Learning, Pandas, Python, TensorFlow",5,12.0,B.Sc,1
+C0084,Mobile Development,"Flutter, Kotlin, Swift",3,0.1,B.Sc,0
+C0085,Web Development,"Django, HTML, JavaScript, Node.js, PHP, React",6,1.2,B.Sc,0
+C0086,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Kubernetes, Terraform",6,2.9,B.Tech,0
+C0087,Cloud & DevOps,"AWS, Azure, Docker, Kubernetes, Linux, Terraform",6,1.6,BCA,0
+C0088,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,11.2,M.Tech,0
+C0089,Cloud & DevOps,"Azure, CI/CD, Kubernetes",3,1.5,M.Tech,1
+C0090,Banking/Fintech Software,"Core Banking Systems, REST APIs, SQL, Spring Boot",4,0.1,Diploma,1
+C0091,Healthcare IT,"FHIR, Java, Python",3,3.5,B.Tech,1
+C0092,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Python, SQL",5,0.9,M.Tech,1
+C0093,Web Development,"Angular, CSS, HTML, JavaScript, Node.js, React",6,8.2,BCA,0
+C0094,Web Development,"Angular, CSS, Django, HTML, PHP, React",6,2.4,BCA,0
+C0095,Data & ML,"Excel, Machine Learning, Pandas, Power BI, SQL, TensorFlow",6,2.5,B.Tech,0
+C0096,Mobile Development,"Flutter, Java, React Native",3,0.4,B.Tech,0
+C0097,Data & ML,"Excel, Pandas, SQL, TensorFlow",4,11.7,B.Tech,0
+C0098,Web Development,"Django, HTML, PHP, React",4,2.0,M.Tech,0
+C0099,Mobile Development,"Java, Kotlin, React Native, Swift",4,3.1,B.Tech,1
+C0100,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,0.1,B.Tech,1
+C0101,Data & ML,"Excel, Machine Learning, Pandas, SQL",4,2.1,M.Tech,1
+C0102,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,0.2,BCA,0
+C0103,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Linux, Terraform",6,3.0,B.Sc,1
+C0104,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native",5,3.1,M.Tech,0
+C0105,Data & ML,"Machine Learning, Pandas, TensorFlow",3,3.0,B.Sc,1
+C0106,Data & ML,"Machine Learning, Pandas, Python, SQL, TensorFlow",5,0.7,B.Tech,0
+C0107,Healthcare IT,"FHIR, HL7, Java, Python",4,0.1,BCA,0
+C0108,Web Development,"Django, JavaScript, Node.js, React",4,1.2,B.Sc,0
+C0109,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, Spring Boot",4,0.9,M.Tech,1
+C0110,Cloud & DevOps,"AWS, Kubernetes, Linux, Terraform",4,3.0,B.Sc,1
+C0111,Cloud & DevOps,"Kubernetes, Linux, Terraform",3,10.3,M.Tech,0
+C0112,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,4.9,Diploma,0
+C0113,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, Spring Boot",4,0.9,BCA,1
+C0114,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,5.9,M.Tech,1
+C0115,Mobile Development,"Java, Kotlin, Swift",3,0.8,B.Tech,0
+C0116,Data & ML,"Excel, Machine Learning, Pandas, Power BI, Python, SQL",6,5.3,B.Tech,1
+C0117,Healthcare IT,"HL7, Java, SQL",3,0.2,Diploma,1
+C0118,Mobile Development,"Flutter, Java, Objective-C",3,1.2,Diploma,1
+C0119,Web Development,"Angular, CSS, HTML, PHP, React",5,2.0,B.Tech,0
+C0120,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,1.2,BCA,1
+C0121,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, SQL",5,4.6,B.Tech,1
+C0122,Mobile Development,"Flutter, Java, React Native, Swift",4,0.2,M.Tech,0
+C0123,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,2.4,MCA,1
+C0124,Banking/Fintech Software,"Java, SQL, Spring Boot",3,4.3,BCA,0
+C0125,Cloud & DevOps,"AWS, CI/CD, Docker, Linux, Terraform",5,1.7,B.Tech,0
+C0126,Web Development,"Angular, HTML, JavaScript, Node.js, React",5,3.7,B.Tech,0
+C0127,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,2.6,B.Sc,1
+C0128,Data & ML,"Machine Learning, Pandas, Power BI",3,8.8,Diploma,1
+C0129,Healthcare IT,"FHIR, HIPAA Compliance, Python, SQL",4,3.7,M.Tech,0
+C0130,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,1.7,Diploma,0
+C0131,Cloud & DevOps,"AWS, Azure, Docker, Linux, Terraform",5,0.9,M.Tech,0
+C0132,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,0.4,B.Tech,1
+C0133,Cloud & DevOps,"Azure, Kubernetes, Linux",3,3.4,B.Tech,0
+C0134,Cloud & DevOps,"Azure, CI/CD, Docker, Kubernetes, Linux, Terraform",6,1.0,B.Sc,0
+C0135,Banking/Fintech Software,"Java, REST APIs, SQL, Spring Boot",4,4.9,Diploma,0
+C0136,Healthcare IT,"FHIR, HIPAA Compliance, Java, Python, SQL",5,6.7,M.Tech,1
+C0137,Healthcare IT,"HIPAA Compliance, Java, Python",3,0.9,BCA,0
+C0138,Web Development,"CSS, Django, JavaScript, Node.js, React",5,3.0,BCA,0
+C0139,Cloud & DevOps,"CI/CD, Docker, Terraform",3,3.6,B.Tech,1
+C0140,Data & ML,"Excel, Machine Learning, Pandas, Power BI, TensorFlow",5,1.0,Diploma,1
+C0141,Banking/Fintech Software,"Core Banking Systems, Java, Machine Learning, REST APIs, SQL, Spring Boot",6,0.3,B.Tech,0
+C0142,Cloud & DevOps,"AWS, Azure, Docker, Kubernetes, Linux, Terraform",6,1.9,B.Tech,0
+C0143,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,1.3,B.Tech,0
+C0144,Mobile Development,"Flutter, Java, Objective-C, React Native, Swift",5,2.3,B.Tech,1
+C0145,Web Development,"Django, HTML, JavaScript, Node.js, PHP, React",6,0.9,B.Tech,0
+C0146,Mobile Development,"Flutter, Java, Kotlin, Objective-C",4,9.0,MCA,1
+C0147,Banking/Fintech Software,"Core Banking Systems, REST APIs, SQL, Spring Boot",4,0.3,B.Sc,0
+C0148,Cloud & DevOps,"AWS, Azure, Docker",3,0.1,B.Tech,1
+C0149,Data & ML,"Excel, Machine Learning, Pandas, Power BI, Python, TensorFlow",6,12.7,B.Tech,1
+C0150,Mobile Development,"Java, React Native, Swift",3,10.5,B.Sc,1
+C0151,Web Development,"Angular, Django, HTML, React",4,0.1,B.Tech,0
+C0152,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,6.0,B.Sc,1
+C0153,Data & ML,"Excel, Machine Learning, Pandas, TensorFlow",4,7.3,BCA,1
+C0154,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL",4,5.7,B.Tech,0
+C0155,Mobile Development,"Kotlin, Objective-C, React Native, Swift",4,0.9,B.Tech,0
+C0156,Web Development,"CSS, JavaScript, PHP",3,3.3,BCA,0
+C0157,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,0.1,M.Tech,0
+C0158,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Kubernetes",5,2.2,B.Sc,0
+C0159,Data & ML,"Power BI, Python, SQL",3,0.3,MCA,0
+C0160,Cloud & DevOps,"Azure, CI/CD, Kubernetes, Linux, Terraform",5,0.1,MCA,1
+C0161,Web Development,"CSS, JavaScript, Node.js, React",4,4.9,Diploma,1
+C0162,Mobile Development,"Flutter, Kotlin, Objective-C, React Native",4,1.3,BCA,0
+C0163,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,0.3,MCA,0
+C0164,Healthcare IT,"HIPAA Compliance, Python, SQL",3,4.6,B.Tech,1
+C0165,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,3.6,MCA,0
+C0166,Data & ML,"Machine Learning, Power BI, TensorFlow",3,2.0,B.Tech,0
+C0167,Cloud & DevOps,"AWS, Azure, Linux, Terraform",4,2.9,B.Tech,0
+C0168,Healthcare IT,"FHIR, HL7, Java, Python, SQL",5,0.8,B.Tech,0
+C0169,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,2.6,M.Tech,1
+C0170,Web Development,"Angular, Django, JavaScript, Node.js, PHP, React",6,0.6,B.Tech,1
+C0171,Web Development,"Django, JavaScript, Node.js, PHP, React",5,2.2,Diploma,1
+C0172,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python",5,0.1,B.Tech,0
+C0173,Cloud & DevOps,"AWS, Docker, Linux",3,0.1,M.Tech,0
+C0174,Data & ML,"Excel, Pandas, Power BI, Python, SQL, TensorFlow",6,0.7,B.Tech,0
+C0175,Mobile Development,"Java, Kotlin, Swift",3,1.2,B.Tech,0
+C0176,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Python",4,0.3,B.Sc,1
+C0177,Banking/Fintech Software,"REST APIs, SQL, Spring Boot",3,0.0,B.Sc,0
+C0178,Healthcare IT,"HIPAA Compliance, HL7, Java, Python, SQL",5,0.6,B.Tech,0
+C0179,Healthcare IT,"FHIR, HL7, Java, SQL",4,0.8,MCA,0
+C0180,Data & ML,"Excel, Pandas, Python, SQL",4,4.1,B.Tech,0
+C0181,Web Development,"Angular, Django, JavaScript, Node.js, React",5,3.5,B.Sc,1
+C0182,Data & ML,"Excel, Pandas, Power BI, Python, SQL, TensorFlow",6,0.3,M.Tech,0
+C0183,Data & ML,"Excel, Power BI, Python, SQL, TensorFlow",5,0.3,MCA,0
+C0184,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Linux",5,1.2,B.Tech,0
+C0185,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Kubernetes, Terraform",6,0.8,B.Tech,0
+C0186,Banking/Fintech Software,"Core Banking Systems, REST APIs, SQL, Spring Boot",4,4.7,M.Tech,0
+C0187,Data & ML,"Machine Learning, Pandas, Power BI, Python, SQL",5,4.0,BCA,0
+C0188,Data & ML,"Excel, Machine Learning, Pandas, Python, SQL, TensorFlow",6,0.4,B.Tech,0
+C0189,Data & ML,"Machine Learning, Python, SQL, TensorFlow",4,2.8,B.Tech,0
+C0190,Web Development,"Angular, Django, HTML, React",4,2.8,B.Tech,0
+C0191,Web Development,"CSS, JavaScript, Node.js, React",4,1.4,M.Tech,1
+C0192,Web Development,"Django, JavaScript, Node.js, PHP",4,1.0,B.Tech,1
+C0193,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,0.2,B.Tech,1
+C0194,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,0.4,B.Tech,1
+C0195,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,0.0,Diploma,0
+C0196,Web Development,"CSS, Django, JavaScript, React",4,3.3,Diploma,0
+C0197,Web Development,"Angular, CSS, Django, HTML, JavaScript, PHP",6,1.9,B.Sc,0
+C0198,Data & ML,"Excel, Pandas, SQL, TensorFlow",4,1.2,M.Tech,0
+C0199,Banking/Fintech Software,"Java, REST APIs, Spring Boot",3,2.3,MCA,1
+C0200,Web Development,"Angular, CSS, Node.js, PHP",4,2.6,B.Tech,0
+C0201,Data & ML,"Machine Learning, Pandas, Power BI, SQL, TensorFlow",5,2.7,B.Tech,0
+C0202,Cloud & DevOps,"AWS, Docker, Kubernetes",3,0.2,Diploma,0
+C0203,Data & ML,"Machine Learning, Power BI, SQL, TensorFlow",4,0.3,B.Tech,0
+C0204,Web Development,"Angular, Django, JavaScript",3,2.7,M.Tech,0
+C0205,Cloud & DevOps,"Docker, Kubernetes, Linux, Terraform",4,0.3,B.Sc,1
+C0206,Cloud & DevOps,"AWS, Azure, Kubernetes, Terraform",4,0.4,MCA,1
+C0207,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,1.4,Diploma,1
+C0208,Web Development,"Angular, Django, HTML, JavaScript, Node.js, PHP",6,5.5,B.Tech,1
+C0209,Healthcare IT,"FHIR, Java, Python, SQL",4,4.8,B.Sc,0
+C0210,Cloud & DevOps,"Azure, Docker, Kubernetes, Linux, Terraform",5,3.3,M.Tech,0
+C0211,Healthcare IT,"FHIR, HIPAA Compliance, HL7",3,2.7,BCA,0
+C0212,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,1.4,M.Tech,0
+C0213,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Python, SQL",5,1.7,BCA,0
+C0214,Mobile Development,"Java, Kotlin, Objective-C, React Native, Swift",5,1.5,M.Tech,1
+C0215,Mobile Development,"Java, Kotlin, Objective-C, React Native, Swift",5,2.3,M.Tech,0
+C0216,Web Development,"CSS, Django, HTML, Node.js, React",5,1.2,B.Tech,1
+C0217,Banking/Fintech Software,"Java, SQL, Spring Boot",3,2.1,MCA,0
+C0218,Web Development,"Angular, Django, HTML",3,0.5,B.Tech,0
+C0219,Data & ML,"Excel, Machine Learning, Pandas, Power BI, TensorFlow",5,0.5,B.Tech,1
+C0220,Cloud & DevOps,"AWS, Azure, Terraform",3,6.3,B.Tech,1
+C0221,Data & ML,"Machine Learning, Pandas, Power BI, Python, TensorFlow",5,1.4,M.Tech,1
+C0222,Mobile Development,"Flutter, Kotlin, Objective-C, React Native, Swift",5,4.8,B.Tech,0
+C0223,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,4.4,B.Tech,0
+C0224,Data & ML,"Excel, Machine Learning, Pandas, Python, SQL, TensorFlow",6,2.3,B.Tech,0
+C0225,Cloud & DevOps,"CI/CD, Docker, Kubernetes, Linux, Terraform",5,9.6,B.Tech,0
+C0226,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Python, SQL",5,1.9,Diploma,0
+C0227,Data & ML,"Machine Learning, Pandas, TensorFlow",3,0.4,B.Tech,0
+C0228,Web Development,"Angular, CSS, Django, Node.js, PHP, React",6,6.2,Diploma,0
+C0229,Web Development,"Angular, CSS, Django, HTML, JavaScript, Node.js",6,4.7,B.Tech,1
+C0230,Cloud & DevOps,"AWS, Azure, Kubernetes",3,2.6,BCA,0
+C0231,Web Development,"Node.js, PHP, React",3,0.3,B.Sc,1
+C0232,Banking/Fintech Software,"Java, REST APIs, Spring Boot",3,0.4,Diploma,1
+C0233,Mobile Development,"Flutter, Java, Objective-C, React Native",4,5.5,B.Tech,0
+C0234,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,2.7,B.Tech,0
+C0235,Banking/Fintech Software,"Java, REST APIs, SQL",3,0.7,MCA,1
+C0236,Mobile Development,"Flutter, Java, Objective-C, React Native, Swift",5,1.5,M.Tech,1
+C0237,Mobile Development,"Flutter, Java, React Native, Swift",4,1.9,M.Tech,1
+C0238,Cloud & DevOps,"AWS, Azure, Docker, Kubernetes, Linux, Terraform",6,0.8,M.Tech,0
+C0239,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot, TensorFlow",6,2.6,B.Tech,0
+C0240,Banking/Fintech Software,"Core Banking Systems, Java, SQL",3,1.4,BCA,1
+C0241,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,0.7,M.Tech,1
+C0242,Data & ML,"Excel, Pandas, Power BI",3,0.5,M.Tech,0
+C0243,Healthcare IT,"HL7, Java, Python",3,0.6,B.Tech,0
+C0244,Web Development,"Angular, CSS, Django, JavaScript",4,4.2,B.Tech,1
+C0245,Web Development,"Angular, CSS, Django, JavaScript, Node.js, PHP",6,1.9,BCA,0
+C0246,Banking/Fintech Software,"Core Banking Systems, Docker, Java, REST APIs, SQL, Spring Boot",6,2.5,B.Tech,1
+C0247,Healthcare IT,"FHIR, HIPAA Compliance, Java, Python, SQL",5,2.3,M.Tech,0
+C0248,Mobile Development,"Kotlin, Objective-C, React Native, Swift",4,2.5,B.Tech,0
+C0249,Data & ML,"Machine Learning, Power BI, Python",3,0.2,MCA,0
+C0250,Data & ML,"Excel, Machine Learning, Power BI, Python, TensorFlow",5,3.1,M.Tech,0
+C0251,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,5.5,B.Sc,0
+C0252,Web Development,"CSS, Node.js, PHP",3,0.8,B.Tech,1
+C0253,Banking/Fintech Software,"Core Banking Systems, Java, SQL",3,2.7,B.Tech,0
+C0254,Web Development,"HTML, JavaScript, Node.js, PHP, React",5,3.2,B.Tech,0
+C0255,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Linux, Terraform",6,13.5,BCA,1
+C0256,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,1.5,BCA,0
+C0257,Web Development,"Angular, CSS, Django, HTML, React",5,1.2,B.Tech,1
+C0258,Banking/Fintech Software,"Core Banking Systems, Java, SQL",3,0.7,B.Tech,0
+C0259,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Linux, Terraform",6,3.1,MCA,1
+C0260,Mobile Development,"Flutter, Java, Kotlin",3,1.3,B.Tech,0
+C0261,Mobile Development,"Flutter, Java, Kotlin, Objective-C, Swift",5,0.1,B.Sc,0
+C0262,Data & ML,"Excel, Machine Learning, Pandas, Power BI, SQL, TensorFlow",6,2.4,M.Tech,0
+C0263,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,11.0,MCA,0
+C0264,Banking/Fintech Software,"Java, REST APIs, SQL, Spring Boot",4,2.0,B.Sc,1
+C0265,Healthcare IT,"HIPAA Compliance, Java, Python",3,2.0,M.Tech,1
+C0266,Data & ML,"Machine Learning, Python, SQL, TensorFlow",4,3.0,B.Tech,0
+C0267,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Linux",5,1.6,B.Tech,1
+C0268,Healthcare IT,"FHIR, HL7, Python, SQL",4,1.0,B.Tech,1
+C0269,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs",3,5.1,M.Tech,0
+C0270,Cloud & DevOps,"Azure, Docker, Linux",3,3.2,B.Sc,0
+C0271,Cloud & DevOps,"AWS, Docker, Kubernetes, Terraform",4,0.5,B.Tech,0
+C0272,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python",5,2.7,BCA,1
+C0273,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,2.6,B.Sc,0
+C0274,Data & ML,"Excel, Machine Learning, Pandas, Python",4,2.2,B.Tech,0
+C0275,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,0.6,B.Tech,1
+C0276,Web Development,"HTML, JavaScript, PHP",3,1.5,B.Tech,0
+C0277,Mobile Development,"Java, Kotlin, Swift",3,3.8,BCA,1
+C0278,Web Development,"CSS, Django, HTML, PHP, React",5,3.3,Diploma,1
+C0279,Banking/Fintech Software,"Core Banking Systems, Java, Spring Boot",3,0.9,M.Tech,0
+C0280,Cloud & DevOps,"AWS, Azure, Docker, Kubernetes, Linux, Terraform",6,0.2,M.Tech,0
+C0281,Banking/Fintech Software,"Core Banking Systems, Java, SQL, Spring Boot",4,2.9,M.Tech,0
+C0282,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,3.9,M.Tech,1
+C0283,Mobile Development,"Java, Objective-C, React Native, Swift",4,1.8,B.Tech,0
+C0284,Web Development,"Angular, Django, JavaScript, Node.js, PHP, React",6,3.6,B.Tech,0
+C0285,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,1.1,B.Sc,1
+C0286,Data & ML,"Pandas, Power BI, Python",3,9.0,M.Tech,0
+C0287,Healthcare IT,"FHIR, HIPAA Compliance, HL7, SQL",4,9.5,MCA,1
+C0288,Banking/Fintech Software,"Java, SQL, Spring Boot",3,3.2,BCA,1
+C0289,Data & ML,"Excel, Machine Learning, Python",3,7.0,BCA,1
+C0290,Cloud & DevOps,"AWS, Linux, Terraform",3,8.7,B.Tech,1
+C0291,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,15.0,BCA,0
+C0292,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,0.1,BCA,0
+C0293,Web Development,"Angular, CSS, Django, HTML, JavaScript, PHP",6,0.4,M.Tech,1
+C0294,Mobile Development,"Flutter, Java, Kotlin, Objective-C, Swift",5,5.9,B.Sc,0
+C0295,Cloud & DevOps,"CI/CD, Docker, Kubernetes, Linux",4,3.1,BCA,0
+C0296,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Linux, Terraform",6,0.4,B.Tech,1
+C0297,Web Development,"Angular, CSS, Django, JavaScript, PHP, React",6,1.7,M.Tech,0
+C0298,Web Development,"CSS, Django, JavaScript, Node.js, PHP, React",6,2.3,MCA,0
+C0299,Healthcare IT,"HL7, Java, Python, SQL",4,2.2,M.Tech,1
+C0300,Cloud & DevOps,"AWS, Azure, CI/CD, Linux",4,0.1,B.Sc,0
+C0301,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Python, SQL",5,0.6,B.Tech,1
+C0302,Cloud & DevOps,"AWS, Azure, Docker, Kubernetes, Linux",5,15.0,B.Tech,1
+C0303,Mobile Development,"Flutter, Objective-C, React Native",3,0.1,M.Tech,0
+C0304,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Linux, Terraform",6,12.4,MCA,0
+C0305,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,2.2,MCA,0
+C0306,Healthcare IT,"FHIR, Java, Python",3,1.3,B.Tech,0
+C0307,Web Development,"CSS, JavaScript, Node.js, PHP",4,2.7,B.Tech,1
+C0308,Data & ML,"Machine Learning, Pandas, Power BI, SQL, TensorFlow",5,1.7,B.Tech,1
+C0309,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,9.4,MCA,0
+C0310,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Linux, Terraform",6,1.6,B.Sc,1
+C0311,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,7.0,Diploma,1
+C0312,Banking/Fintech Software,"Core Banking Systems, Java, Kubernetes, REST APIs, SQL, Spring Boot",6,0.8,Diploma,1
+C0313,Data & ML,"Pandas, SQL, TensorFlow",3,5.3,B.Tech,0
+C0314,Web Development,"Django, PHP, React",3,0.7,B.Tech,1
+C0315,Cloud & DevOps,"AWS, Kubernetes, Linux, Terraform",4,4.8,BCA,0
+C0316,Banking/Fintech Software,"Core Banking Systems, SQL, Spring Boot",3,7.9,Diploma,0
+C0317,Web Development,"CSS, HTML, JavaScript, Node.js",4,2.2,M.Tech,1
+C0318,Web Development,"CSS, Django, HTML, Node.js, PHP",5,5.1,B.Tech,0
+C0319,Cloud & DevOps,"Azure, CI/CD, Kubernetes, Linux, Terraform",5,0.1,B.Sc,1
+C0320,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,6.3,B.Tech,0
+C0321,Mobile Development,"Java, Kotlin, Objective-C",3,0.1,B.Sc,0
+C0322,Web Development,"Angular, CSS, Django, HTML, JavaScript",5,3.2,BCA,0
+C0323,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,0.9,B.Tech,1
+C0324,Banking/Fintech Software,"Core Banking Systems, Java, Linux, REST APIs, SQL, Spring Boot",6,2.1,B.Tech,0
+C0325,Data & ML,"Machine Learning, Python, TensorFlow",3,6.7,Diploma,0
+C0326,Mobile Development,"Java, Kotlin, React Native",3,2.0,BCA,1
+C0327,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,3.3,M.Tech,1
+C0328,Data & ML,"Pandas, Power BI, Python",3,6.3,MCA,1
+C0329,Cloud & DevOps,"AWS, Docker, Terraform",3,0.5,B.Tech,0
+C0330,Cloud & DevOps,"AWS, Docker, Linux",3,3.6,BCA,1
+C0331,Mobile Development,"Flutter, Java, Objective-C, Swift",4,0.6,B.Sc,1
+C0332,Web Development,"Angular, JavaScript, Node.js",3,0.1,B.Sc,0
+C0333,Healthcare IT,"FHIR, HL7, Java, Python, SQL",5,0.8,Diploma,0
+C0334,Mobile Development,"Flutter, Kotlin, Objective-C, React Native",4,5.4,M.Tech,0
+C0335,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,0.3,B.Tech,0
+C0336,Banking/Fintech Software,"Core Banking Systems, Java, PHP, REST APIs, SQL, Spring Boot",6,0.9,BCA,0
+C0337,Web Development,"HTML, JavaScript, Node.js, PHP, React",5,0.4,B.Tech,0
+C0338,Data & ML,"Excel, Pandas, Power BI",3,9.9,B.Tech,1
+C0339,Cloud & DevOps,"Azure, Docker, Kubernetes, Terraform",4,4.2,MCA,0
+C0340,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, React, SQL, Spring Boot",6,0.2,B.Tech,1
+C0341,Banking/Fintech Software,"Java, REST APIs, SQL, Spring Boot",4,3.7,M.Tech,0
+C0342,Web Development,"Angular, Django, JavaScript, Node.js, PHP, React",6,0.1,B.Sc,1
+C0343,Healthcare IT,"FHIR, HIPAA Compliance, Python",3,1.8,BCA,0
+C0344,Cloud & DevOps,"AWS, Azure, Docker, Kubernetes, Linux, Terraform",6,0.1,B.Tech,0
+C0345,Web Development,"Angular, CSS, HTML, JavaScript, PHP",5,5.1,B.Tech,0
+C0346,Mobile Development,"Flutter, Java, Kotlin, Objective-C",4,1.0,Diploma,0
+C0347,Web Development,"Node.js, PHP, React",3,5.8,M.Tech,1
+C0348,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Linux",5,0.7,B.Tech,1
+C0349,Mobile Development,"Kotlin, Objective-C, React Native, Swift",4,0.4,B.Sc,1
+C0350,Data & ML,"Excel, Machine Learning, Pandas, Python, SQL, TensorFlow",6,1.7,Diploma,0
+C0351,Data & ML,"Excel, Machine Learning, Power BI, Python, SQL",5,10.0,MCA,0
+C0352,Web Development,"Angular, HTML, JavaScript, PHP, React",5,1.6,B.Sc,0
+C0353,Cloud & DevOps,"Docker, Kubernetes, Linux",3,0.7,B.Sc,1
+C0354,Mobile Development,"Flutter, Java, Kotlin, Swift",4,6.0,M.Tech,1
+C0355,Web Development,"HTML, JavaScript, PHP, React",4,0.7,B.Tech,0
+C0356,Mobile Development,"Flutter, Kotlin, Objective-C, React Native, Swift",5,5.6,MCA,1
+C0357,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,1.0,Diploma,1
+C0358,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Linux, Terraform",6,4.8,M.Tech,0
+C0359,Data & ML,"Machine Learning, Python, TensorFlow",3,2.8,B.Tech,0
+C0360,Banking/Fintech Software,"CSS, Core Banking Systems, Java, REST APIs, SQL, Spring Boot",6,2.0,B.Tech,0
+C0361,Cloud & DevOps,"Kubernetes, Linux, Terraform",3,2.7,M.Tech,1
+C0362,Banking/Fintech Software,"Core Banking Systems, REST APIs, SQL",3,0.0,B.Tech,0
+C0363,Web Development,"Django, HTML, JavaScript, Node.js",4,11.0,MCA,1
+C0364,Data & ML,"Pandas, Power BI, TensorFlow",3,5.9,MCA,0
+C0365,Cloud & DevOps,"Azure, CI/CD, Linux, Terraform",4,4.1,B.Tech,0
+C0366,Mobile Development,"Flutter, Java, Kotlin, Objective-C",4,0.5,M.Tech,1
+C0367,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,1.3,MCA,1
+C0368,Cloud & DevOps,"AWS, CI/CD, Docker",3,2.2,B.Tech,0
+C0369,Cloud & DevOps,"Azure, CI/CD, Terraform",3,5.2,B.Tech,0
+C0370,Cloud & DevOps,"AWS, Azure, Docker, Terraform",4,2.5,BCA,1
+C0371,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, Spring Boot",4,0.1,BCA,1
+C0372,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs",3,3.7,B.Tech,1
+C0373,Web Development,"Angular, CSS, Django, Node.js, React",5,2.8,B.Tech,1
+C0374,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,3.8,B.Sc,0
+C0375,Mobile Development,"Flutter, Kotlin, Objective-C, React Native, Swift",5,2.0,BCA,0
+C0376,Healthcare IT,"FHIR, HL7, Java, Python",4,5.1,M.Tech,1
+C0377,Data & ML,"Machine Learning, Pandas, SQL",3,0.5,M.Tech,1
+C0378,Banking/Fintech Software,"Core Banking Systems, Java, Python, REST APIs, SQL, Spring Boot",6,0.9,B.Tech,1
+C0379,Mobile Development,"Flutter, Java, React Native, Swift",4,1.2,M.Tech,1
+C0380,Mobile Development,"Flutter, Kotlin, Swift",3,4.7,BCA,0
+C0381,Data & ML,"Excel, Python, SQL, TensorFlow",4,0.1,BCA,0
+C0382,Cloud & DevOps,"AWS, Azure, CI/CD, Kubernetes, Linux, Terraform",6,11.0,BCA,0
+C0383,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,0.7,M.Tech,0
+C0384,Data & ML,"Machine Learning, Pandas, Python, SQL, TensorFlow",5,1.9,B.Sc,1
+C0385,Banking/Fintech Software,"Core Banking Systems, Java, Spring Boot",3,5.6,BCA,1
+C0386,Banking/Fintech Software,"Core Banking Systems, Java, SQL, Spring Boot",4,13.2,B.Tech,1
+C0387,Data & ML,"Excel, Machine Learning, Pandas, Power BI, Python, TensorFlow",6,2.7,B.Tech,0
+C0388,Web Development,"CSS, Django, JavaScript, Node.js, PHP, React",6,6.2,Diploma,0
+C0389,Web Development,"Angular, HTML, Node.js, PHP",4,14.5,B.Tech,0
+C0390,Mobile Development,"Flutter, Java, Objective-C, React Native, Swift",5,2.9,BCA,1
+C0391,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,4.5,M.Tech,1
+C0392,Web Development,"Angular, Django, JavaScript, PHP",4,0.8,Diploma,0
+C0393,Cloud & DevOps,"Azure, Linux, Terraform",3,0.2,M.Tech,0
+C0394,Banking/Fintech Software,"Core Banking Systems, REST APIs, SQL",3,1.8,M.Tech,0
+C0395,Web Development,"CSS, Django, HTML, JavaScript",4,0.3,BCA,0
+C0396,Data & ML,"Excel, Machine Learning, Pandas, Power BI, SQL, TensorFlow",6,0.9,BCA,0
+C0397,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,2.7,B.Tech,0
+C0398,Healthcare IT,"FHIR, HL7, Java, Python, SQL",5,0.8,B.Tech,0
+C0399,Cloud & DevOps,"AWS, Docker, Kubernetes, Terraform",4,1.8,BCA,0
+C0400,Healthcare IT,"HIPAA Compliance, HL7, Python",3,0.9,BCA,1
+C0401,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Linux, Terraform",6,1.3,B.Tech,1
+C0402,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,3.3,M.Tech,1
+C0403,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,1.8,B.Sc,0
+C0404,Cloud & DevOps,"Azure, CI/CD, Kubernetes, Linux, Terraform",5,0.4,B.Tech,0
+C0405,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,0.8,B.Tech,1
+C0406,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,1.8,Diploma,0
+C0407,Cloud & DevOps,"Azure, CI/CD, Kubernetes",3,2.6,BCA,0
+C0408,Cloud & DevOps,"CI/CD, Docker, Kubernetes, Terraform",4,10.1,B.Tech,1
+C0409,Mobile Development,"Flutter, Java, React Native, Swift",4,10.8,BCA,0
+C0410,Cloud & DevOps,"Azure, CI/CD, Docker, Kubernetes, Linux",5,2.0,BCA,0
+C0411,Data & ML,"Excel, Machine Learning, Power BI, Python, SQL, TensorFlow",6,0.4,B.Tech,1
+C0412,Data & ML,"Excel, Machine Learning, Power BI, Python, SQL, TensorFlow",6,3.4,Diploma,0
+C0413,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,0.5,B.Tech,1
+C0414,Mobile Development,"Java, Kotlin, Objective-C, React Native, Swift",5,3.5,B.Sc,1
+C0415,Mobile Development,"Flutter, Java, Objective-C, React Native",4,0.1,B.Tech,1
+C0416,Web Development,"Angular, CSS, HTML, Node.js, React",5,2.5,B.Tech,1
+C0417,Data & ML,"Machine Learning, Pandas, Power BI, Python",4,7.5,BCA,1
+C0418,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Python",4,1.5,BCA,0
+C0419,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,0.5,BCA,0
+C0420,Healthcare IT,"FHIR, HIPAA Compliance, HL7",3,1.6,B.Sc,1
+C0421,Banking/Fintech Software,"Core Banking Systems, Java, Spring Boot",3,1.0,B.Tech,1
+C0422,Mobile Development,"Flutter, Java, Kotlin, Objective-C",4,1.2,BCA,1
+C0423,Healthcare IT,"FHIR, HL7, Java, SQL",4,6.3,B.Tech,1
+C0424,Banking/Fintech Software,"Java, REST APIs, Spring Boot",3,0.4,M.Tech,0
+C0425,Cloud & DevOps,"AWS, CI/CD, Kubernetes, Linux, Terraform",5,3.0,BCA,0
+C0426,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,1.5,M.Tech,0
+C0427,Mobile Development,"Kotlin, Objective-C, Swift",3,1.8,B.Tech,0
+C0428,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,3.3,BCA,0
+C0429,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,2.3,Diploma,1
+C0430,Data & ML,"Machine Learning, Pandas, Power BI, Python, SQL, TensorFlow",6,0.1,B.Tech,0
+C0431,Mobile Development,"Flutter, Kotlin, Objective-C, Swift",4,2.2,B.Tech,0
+C0432,Data & ML,"Excel, Machine Learning, Pandas, Power BI, TensorFlow",5,4.3,B.Sc,1
+C0433,Healthcare IT,"FHIR, HL7, Java, Python, SQL",5,2.2,B.Sc,0
+C0434,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,3.1,B.Sc,0
+C0435,Data & ML,"Excel, Machine Learning, Power BI, Python, TensorFlow",5,1.4,B.Tech,0
+C0436,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Terraform",5,0.3,M.Tech,0
+C0437,Data & ML,"Excel, Machine Learning, Pandas, Power BI, SQL, TensorFlow",6,3.3,Diploma,0
+C0438,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot, Terraform",6,1.1,BCA,1
+C0439,Healthcare IT,"HL7, Java, SQL",3,11.3,B.Sc,0
+C0440,Web Development,"Angular, CSS, Node.js, PHP, React",5,3.4,B.Tech,0
+C0441,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Linux",5,1.0,MCA,0
+C0442,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,9.9,M.Tech,1
+C0443,Data & ML,"Pandas, SQL, TensorFlow",3,1.4,M.Tech,0
+C0444,Data & ML,"Excel, Python, TensorFlow",3,2.8,B.Sc,1
+C0445,Data & ML,"Machine Learning, Power BI, Python",3,4.7,BCA,0
+C0446,Data & ML,"Machine Learning, Python, SQL",3,5.5,Diploma,0
+C0447,Banking/Fintech Software,"Java, REST APIs, SQL, Spring Boot",4,0.9,B.Tech,1
+C0448,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,1.7,BCA,0
+C0449,Cloud & DevOps,"Azure, CI/CD, Docker, Kubernetes, Linux, Terraform",6,0.5,M.Tech,0
+C0450,Data & ML,"Excel, Pandas, Power BI",3,4.0,B.Sc,0
+C0451,Web Development,"Django, JavaScript, Node.js",3,0.6,B.Tech,0
+C0452,Web Development,"Angular, CSS, JavaScript, PHP, React",5,2.4,B.Tech,0
+C0453,Healthcare IT,"FHIR, HL7, Java",3,0.2,B.Tech,0
+C0454,Cloud & DevOps,"CI/CD, Docker, Kubernetes, Linux, Terraform",5,3.6,M.Tech,0
+C0455,Data & ML,"Excel, Pandas, Power BI, SQL, TensorFlow",5,3.9,B.Tech,0
+C0456,Mobile Development,"Flutter, Kotlin, React Native, Swift",4,0.3,MCA,0
+C0457,Healthcare IT,"HIPAA Compliance, HL7, Java, Python, SQL",5,4.4,B.Tech,1
+C0458,Web Development,"Angular, CSS, HTML, Node.js, PHP, React",6,0.6,B.Tech,0
+C0459,Healthcare IT,"HL7, Java, Python",3,2.9,M.Tech,1
+C0460,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,4.8,B.Tech,0
+C0461,Healthcare IT,"HIPAA Compliance, HL7, Java, SQL",4,2.7,BCA,0
+C0462,Cloud & DevOps,"Azure, CI/CD, Linux, Terraform",4,1.2,BCA,1
+C0463,Data & ML,"Excel, Machine Learning, Python, SQL",4,1.4,Diploma,0
+C0464,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,0.2,BCA,1
+C0465,Banking/Fintech Software,"Core Banking Systems, SQL, Spring Boot",3,3.0,MCA,0
+C0466,Mobile Development,"Kotlin, Objective-C, React Native, Swift",4,0.3,M.Tech,1
+C0467,Data & ML,"Excel, Machine Learning, SQL",3,1.1,Diploma,0
+C0468,Healthcare IT,"FHIR, HL7, Python, SQL",4,0.8,B.Tech,0
+C0469,Data & ML,"Pandas, Power BI, TensorFlow",3,4.0,MCA,0
+C0470,Mobile Development,"Flutter, Kotlin, React Native, Swift",4,2.2,BCA,0
+C0471,Cloud & DevOps,"AWS, Docker, Kubernetes, Linux, Terraform",5,6.0,BCA,0
+C0472,Banking/Fintech Software,"CSS, Core Banking Systems, Java, REST APIs, SQL, Spring Boot",6,3.7,B.Tech,0
+C0473,Mobile Development,"Java, Kotlin, Objective-C, React Native",4,1.3,B.Tech,0
+C0474,Mobile Development,"Flutter, Objective-C, Swift",3,2.4,B.Tech,0
+C0475,Mobile Development,"Flutter, Java, Kotlin, React Native, Swift",5,8.6,B.Sc,0
+C0476,Data & ML,"Machine Learning, Power BI, SQL, TensorFlow",4,2.1,Diploma,1
+C0477,Data & ML,"Machine Learning, Pandas, Power BI, TensorFlow",4,2.1,B.Tech,0
+C0478,Cloud & DevOps,"CI/CD, Docker, Kubernetes",3,1.4,B.Sc,1
+C0479,Data & ML,"Machine Learning, Pandas, Power BI, Python",4,0.5,B.Tech,1
+C0480,Mobile Development,"Flutter, Java, Kotlin, Objective-C, Swift",5,1.5,B.Tech,1
+C0481,Healthcare IT,"FHIR, HL7, Python, SQL",4,9.5,BCA,1
+C0482,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, Spring Boot",4,0.4,B.Sc,1
+C0483,Mobile Development,"Kotlin, Objective-C, React Native, Swift",4,0.4,B.Sc,1
+C0484,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,2.1,B.Tech,0
+C0485,Data & ML,"Machine Learning, Power BI, SQL",3,0.4,M.Tech,0
+C0486,Mobile Development,"Flutter, Java, Kotlin, React Native, Swift",5,9.9,M.Tech,1
+C0487,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,2.7,Diploma,1
+C0488,Mobile Development,"Flutter, Objective-C, React Native",3,0.3,BCA,0
+C0489,Healthcare IT,"FHIR, HIPAA Compliance, HL7, SQL",4,2.8,B.Tech,0
+C0490,Data & ML,"Machine Learning, Python, TensorFlow",3,4.6,M.Tech,0
+C0491,Healthcare IT,"FHIR, HIPAA Compliance, Java, Python, SQL",5,4.2,BCA,0
+C0492,Web Development,"Angular, Django, HTML, PHP, React",5,0.8,B.Tech,0
+C0493,Web Development,"Angular, Django, HTML, JavaScript",4,0.9,B.Tech,1
+C0494,Banking/Fintech Software,"Core Banking Systems, Java, Spring Boot",3,2.1,Diploma,1
+C0495,Web Development,"Angular, CSS, Django, JavaScript, PHP",5,0.7,B.Tech,1
+C0496,Cloud & DevOps,"AWS, Docker, Kubernetes, Linux",4,1.7,B.Tech,1
+C0497,Data & ML,"Pandas, Power BI, SQL, TensorFlow",4,3.2,B.Tech,0
+C0498,Cloud & DevOps,"AWS, CI/CD, Linux, Terraform",4,5.3,MCA,1
+C0499,Data & ML,"Excel, Pandas, Power BI, TensorFlow",4,0.9,B.Tech,0
+C0500,Web Development,"CSS, Django, HTML, Node.js",4,0.9,MCA,0
+C0501,Data & ML,"Excel, Machine Learning, Pandas, Python, TensorFlow",5,2.9,B.Tech,1
+C0502,Web Development,"CSS, Node.js, React",3,11.2,B.Sc,1
+C0503,Banking/Fintech Software,"Azure, Core Banking Systems, Java, REST APIs, SQL, Spring Boot",6,1.4,B.Tech,1
+C0504,Mobile Development,"Flutter, React Native, Swift",3,5.6,B.Tech,0
+C0505,Banking/Fintech Software,"Core Banking Systems, Java, JavaScript, REST APIs, SQL, Spring Boot",6,6.0,B.Tech,1
+C0506,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,1.4,B.Tech,0
+C0507,Banking/Fintech Software,"Core Banking Systems, Java, SQL",3,9.4,B.Tech,0
+C0508,Data & ML,"Excel, Machine Learning, Pandas, Power BI, Python, SQL",6,1.1,BCA,0
+C0509,Healthcare IT,"Java, Python, SQL",3,1.0,Diploma,0
+C0510,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,1.9,BCA,1
+C0511,Web Development,"Angular, CSS, Django, HTML, PHP",5,1.8,B.Tech,1
+C0512,Cloud & DevOps,"Azure, CI/CD, Kubernetes, Linux, Terraform",5,2.2,B.Tech,1
+C0513,Cloud & DevOps,"AWS, Linux, Terraform",3,1.8,B.Tech,0
+C0514,Cloud & DevOps,"AWS, Docker, Kubernetes, Linux, Terraform",5,3.8,B.Tech,0
+C0515,Web Development,"Angular, HTML, JavaScript, Node.js, PHP, React",6,0.1,M.Tech,0
+C0516,Web Development,"Angular, CSS, HTML, JavaScript, PHP",5,1.1,B.Tech,1
+C0517,Data & ML,"Excel, Machine Learning, Pandas, Python, TensorFlow",5,4.6,B.Tech,0
+C0518,Healthcare IT,"FHIR, HIPAA Compliance, Java",3,3.2,MCA,0
+C0519,Healthcare IT,"FHIR, HIPAA Compliance, Java, Python",4,0.3,M.Tech,1
+C0520,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Kubernetes, Terraform",6,4.4,BCA,0
+C0521,Cloud & DevOps,"AWS, Docker, Kubernetes, Linux",4,0.0,B.Tech,0
+C0522,Cloud & DevOps,"Azure, Docker, Kubernetes",3,3.1,M.Tech,0
+C0523,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, Spring Boot",4,1.2,B.Tech,0
+C0524,Mobile Development,"Flutter, Kotlin, React Native, Swift",4,2.8,BCA,1
+C0525,Banking/Fintech Software,"Core Banking Systems, Excel, Java, REST APIs, SQL, Spring Boot",6,2.9,B.Tech,0
+C0526,Cloud & DevOps,"Azure, CI/CD, Docker",3,7.9,B.Tech,0
+C0527,Data & ML,"Excel, Machine Learning, Pandas, Power BI, SQL",5,2.4,B.Tech,0
+C0528,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,0.8,B.Tech,0
+C0529,Data & ML,"Machine Learning, Python, SQL, TensorFlow",4,0.0,Diploma,1
+C0530,Banking/Fintech Software,"Java, REST APIs, SQL, Spring Boot",4,5.9,B.Sc,1
+C0531,Healthcare IT,"FHIR, HIPAA Compliance, Java, Python",4,3.0,B.Tech,1
+C0532,Healthcare IT,"HIPAA Compliance, HL7, Java, Python",4,3.9,MCA,1
+C0533,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Python, SQL",5,1.2,MCA,0
+C0534,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,0.1,B.Tech,0
+C0535,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,0.3,Diploma,0
+C0536,Healthcare IT,"HIPAA Compliance, HL7, Java, Python, SQL",5,5.5,MCA,0
+C0537,Healthcare IT,"FHIR, HIPAA Compliance, SQL",3,4.1,BCA,0
+C0538,Healthcare IT,"FHIR, HL7, Java, Python, SQL",5,3.5,B.Sc,1
+C0539,Web Development,"Angular, CSS, Django, HTML, JavaScript, React",6,1.7,B.Tech,0
+C0540,Cloud & DevOps,"AWS, Azure, CI/CD, Kubernetes, Linux, Terraform",6,0.8,MCA,1
+C0541,Data & ML,"Excel, Machine Learning, Pandas, Power BI, Python, TensorFlow",6,0.6,B.Sc,1
+C0542,Cloud & DevOps,"Docker, Kubernetes, Linux",3,2.4,MCA,1
+C0543,Mobile Development,"Flutter, Java, Kotlin, React Native, Swift",5,3.5,B.Tech,0
+C0544,Data & ML,"Excel, Machine Learning, Pandas, Power BI, Python, SQL",6,0.0,MCA,0
+C0545,Web Development,"CSS, HTML, JavaScript",3,0.0,MCA,1
+C0546,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,1.2,B.Tech,0
+C0547,Cloud & DevOps,"AWS, Azure, CI/CD, Kubernetes, Linux, Terraform",6,2.1,B.Tech,0
+C0548,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,3.8,B.Sc,0
+C0549,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs",3,3.3,B.Tech,0
+C0550,Healthcare IT,"FHIR, HIPAA Compliance, Python, SQL",4,2.9,B.Tech,1
+C0551,Web Development,"Angular, CSS, Django, JavaScript, Node.js, PHP",6,1.5,B.Sc,0
+C0552,Mobile Development,"Flutter, Kotlin, Objective-C, React Native, Swift",5,0.2,BCA,0
+C0553,Banking/Fintech Software,"Core Banking Systems, Java, PHP, REST APIs, SQL, Spring Boot",6,0.2,M.Tech,0
+C0554,Cloud & DevOps,"Azure, CI/CD, Docker, Kubernetes, Linux",5,0.9,B.Sc,0
+C0555,Healthcare IT,"HIPAA Compliance, HL7, Java, SQL",4,0.5,BCA,1
+C0556,Mobile Development,"Flutter, Kotlin, React Native, Swift",4,3.7,MCA,0
+C0557,Web Development,"Angular, CSS, Django, JavaScript, Node.js, React",6,1.4,B.Tech,1
+C0558,Banking/Fintech Software,"Core Banking Systems, REST APIs, Spring Boot",3,0.3,B.Tech,0
+C0559,Mobile Development,"Flutter, Java, Kotlin, React Native, Swift",5,4.4,MCA,0
+C0560,Data & ML,"Machine Learning, Power BI, SQL",3,1.6,BCA,1
+C0561,Cloud & DevOps,"AWS, Azure, CI/CD, Kubernetes, Linux",5,3.5,Diploma,1
+C0562,Web Development,"Angular, CSS, Django, PHP, React",5,2.5,BCA,0
+C0563,Data & ML,"Excel, Pandas, Power BI",3,11.7,B.Tech,1
+C0564,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Python",4,5.3,B.Tech,0
+C0565,Banking/Fintech Software,"Core Banking Systems, Java, Spring Boot",3,4.6,B.Tech,1
+C0566,Web Development,"Angular, CSS, Django, JavaScript",4,6.2,B.Sc,0
+C0567,Mobile Development,"Java, Kotlin, Objective-C",3,1.7,Diploma,1
+C0568,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL",4,0.3,MCA,0
+C0569,Cloud & DevOps,"CI/CD, Docker, Linux",3,4.5,B.Tech,0
+C0570,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL",4,2.8,B.Tech,1
+C0571,Data & ML,"Excel, Machine Learning, Power BI, Python, SQL, TensorFlow",6,1.9,B.Tech,0
+C0572,Cloud & DevOps,"AWS, Docker, Kubernetes, Terraform",4,1.0,B.Tech,0
+C0573,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,4.6,Diploma,0
+C0574,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,1.8,MCA,0
+C0575,Banking/Fintech Software,"Core Banking Systems, SQL, Spring Boot",3,5.8,B.Tech,1
+C0576,Healthcare IT,"HIPAA Compliance, HL7, Java, Python, SQL",5,0.4,M.Tech,0
+C0577,Mobile Development,"Flutter, Java, Kotlin, Objective-C, Swift",5,0.3,B.Tech,1
+C0578,Healthcare IT,"FHIR, HIPAA Compliance, Java, Python, SQL",5,9.9,BCA,1
+C0579,Mobile Development,"Flutter, Java, Kotlin, Objective-C",4,5.3,MCA,1
+C0580,Banking/Fintech Software,"Core Banking Systems, SQL, Spring Boot",3,11.9,B.Tech,1
+C0581,Data & ML,"Excel, Pandas, Power BI, Python",4,0.6,B.Tech,0
+C0582,Banking/Fintech Software,"REST APIs, SQL, Spring Boot",3,2.8,B.Tech,0
+C0583,Data & ML,"Machine Learning, Power BI, Python, TensorFlow",4,3.8,M.Tech,0
+C0584,Healthcare IT,"HL7, Java, Python, SQL",4,2.5,M.Tech,0
+C0585,Data & ML,"Excel, Pandas, Power BI, SQL",4,1.6,M.Tech,1
+C0586,Cloud & DevOps,"Docker, Linux, Terraform",3,2.4,B.Tech,0
+C0587,Banking/Fintech Software,"REST APIs, SQL, Spring Boot",3,1.7,B.Tech,1
+C0588,Data & ML,"Excel, Machine Learning, Python",3,3.3,M.Tech,0
+C0589,Web Development,"CSS, Node.js, React",3,4.2,B.Tech,1
+C0590,Web Development,"CSS, Django, PHP, React",4,4.9,M.Tech,0
+C0591,Data & ML,"Machine Learning, Pandas, Python, SQL, TensorFlow",5,2.1,B.Tech,1
+C0592,Cloud & DevOps,"AWS, Azure, Docker, Terraform",4,1.2,MCA,0
+C0593,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Linux, Terraform",6,0.4,BCA,0
+C0594,Healthcare IT,"FHIR, HIPAA Compliance, Python, SQL",4,0.8,M.Tech,1
+C0595,Web Development,"CSS, Django, HTML, React",4,2.4,BCA,0
+C0596,Web Development,"Angular, CSS, JavaScript, PHP, React",5,7.2,M.Tech,0
+C0597,Web Development,"Django, HTML, JavaScript, Node.js",4,1.4,M.Tech,0
+C0598,Data & ML,"Pandas, Power BI, Python, SQL, TensorFlow",5,4.5,Diploma,0
+C0599,Data & ML,"Excel, Power BI, Python, TensorFlow",4,0.3,B.Tech,1
+C0600,Cloud & DevOps,"Azure, Docker, Linux",3,3.0,MCA,0
+C0601,Data & ML,"Excel, Machine Learning, Pandas, Power BI, Python, SQL",6,6.8,M.Tech,0
+C0602,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, Spring Boot",4,4.7,B.Tech,1
+C0603,Healthcare IT,"FHIR, HIPAA Compliance, Java, Python, SQL",5,6.8,B.Tech,0
+C0604,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,0.7,B.Tech,1
+C0605,Data & ML,"Excel, Machine Learning, Pandas, Power BI, Python, SQL",6,5.2,B.Tech,1
+C0606,Mobile Development,"Java, Kotlin, Objective-C, Swift",4,0.3,B.Sc,1
+C0607,Web Development,"Angular, CSS, Django, Node.js",4,1.2,Diploma,0
+C0608,Banking/Fintech Software,"Core Banking Systems, REST APIs, Spring Boot",3,3.3,BCA,0
+C0609,Healthcare IT,"FHIR, HL7, Java, Python",4,11.7,BCA,0
+C0610,Web Development,"Django, Node.js, React",3,2.5,M.Tech,1
+C0611,Banking/Fintech Software,"Java, REST APIs, SQL, Spring Boot",4,0.7,B.Tech,1
+C0612,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,5.9,B.Sc,0
+C0613,Web Development,"Angular, Django, HTML, JavaScript, Node.js",5,4.3,Diploma,1
+C0614,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,1.8,B.Tech,0
+C0615,Data & ML,"Excel, Pandas, Power BI, Python, SQL",5,6.4,M.Tech,0
+C0616,Web Development,"Angular, CSS, Django, HTML, JavaScript, Node.js",6,5.2,B.Tech,0
+C0617,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Kubernetes, Linux",6,7.1,MCA,0
+C0618,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python",5,3.2,BCA,0
+C0619,Web Development,"Angular, Django, PHP",3,4.9,B.Sc,0
+C0620,Web Development,"Angular, Node.js, PHP",3,0.4,BCA,0
+C0621,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,0.0,BCA,0
+C0622,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,0.8,B.Sc,0
+C0623,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, SQL",5,1.2,B.Sc,0
+C0624,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Terraform",5,0.7,B.Tech,0
+C0625,Data & ML,"Machine Learning, Pandas, Python, TensorFlow",4,4.3,Diploma,0
+C0626,Banking/Fintech Software,"Java, SQL, Spring Boot",3,4.7,BCA,0
+C0627,Cloud & DevOps,"AWS, CI/CD, Linux",3,6.2,B.Tech,0
+C0628,Healthcare IT,"FHIR, HIPAA Compliance, HL7, SQL",4,1.8,M.Tech,1
+C0629,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,0.4,M.Tech,1
+C0630,Cloud & DevOps,"AWS, Azure, Docker, Kubernetes, Terraform",5,1.6,B.Tech,1
+C0631,Healthcare IT,"FHIR, HIPAA Compliance, Java, Python",4,10.2,B.Tech,1
+C0632,Mobile Development,"Flutter, Java, Kotlin, Swift",4,7.2,MCA,1
+C0633,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,12.0,BCA,0
+C0634,Banking/Fintech Software,"Core Banking Systems, Java, Machine Learning, REST APIs, SQL, Spring Boot",6,5.3,B.Tech,1
+C0635,Cloud & DevOps,"AWS, CI/CD, Kubernetes, Linux",4,0.7,B.Tech,0
+C0636,Cloud & DevOps,"Azure, CI/CD, Docker",3,0.8,B.Tech,0
+C0637,Cloud & DevOps,"Azure, CI/CD, Terraform",3,5.2,B.Tech,0
+C0638,Data & ML,"Machine Learning, Pandas, SQL, TensorFlow",4,4.1,B.Tech,1
+C0639,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,6.3,B.Tech,0
+C0640,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,0.6,B.Tech,0
+C0641,Healthcare IT,"HIPAA Compliance, HL7, SQL",3,1.0,M.Tech,0
+C0642,Mobile Development,"Java, Kotlin, Objective-C, React Native",4,5.8,M.Tech,0
+C0643,Web Development,"Angular, Django, HTML, JavaScript, Node.js, React",6,0.7,M.Tech,1
+C0644,Banking/Fintech Software,"Core Banking Systems, SQL, Spring Boot",3,7.2,BCA,1
+C0645,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,9.4,B.Tech,1
+C0646,Web Development,"Angular, CSS, HTML, Node.js, PHP, React",6,1.1,M.Tech,1
+C0647,Cloud & DevOps,"Docker, Kubernetes, Linux",3,1.3,B.Tech,0
+C0648,Healthcare IT,"HIPAA Compliance, Java, SQL",3,3.0,BCA,1
+C0649,Data & ML,"Excel, Machine Learning, Power BI, Python, SQL, TensorFlow",6,3.4,B.Tech,0
+C0650,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,2.0,BCA,1
+C0651,Web Development,"CSS, Node.js, PHP, React",4,1.9,Diploma,0
+C0652,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes",4,0.2,B.Tech,0
+C0653,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,2.8,Diploma,0
+C0654,Web Development,"Angular, Django, JavaScript, React",4,10.7,B.Tech,0
+C0655,Web Development,"Angular, CSS, HTML, JavaScript, Node.js, React",6,1.9,M.Tech,0
+C0656,Banking/Fintech Software,"Java, REST APIs, Spring Boot",3,2.2,B.Tech,0
+C0657,Data & ML,"Excel, Python, SQL, TensorFlow",4,5.4,B.Sc,0
+C0658,Web Development,"CSS, Django, JavaScript, PHP, React",5,4.9,BCA,0
+C0659,Healthcare IT,"HIPAA Compliance, HL7, Java, Python, SQL",5,0.1,B.Tech,1
+C0660,Web Development,"Django, Node.js, React",3,2.9,B.Tech,0
+C0661,Mobile Development,"Flutter, Kotlin, Objective-C, React Native, Swift",5,2.6,B.Tech,1
+C0662,Web Development,"Angular, JavaScript, Node.js, React",4,14.8,B.Tech,0
+C0663,Data & ML,"Pandas, Power BI, Python",3,1.5,MCA,1
+C0664,Mobile Development,"Java, React Native, Swift",3,3.8,BCA,0
+C0665,Cloud & DevOps,"Azure, Docker, Kubernetes",3,3.8,Diploma,1
+C0666,Web Development,"JavaScript, Node.js, React",3,3.0,B.Tech,0
+C0667,Data & ML,"Excel, Pandas, Power BI, Python, TensorFlow",5,0.1,B.Sc,0
+C0668,Cloud & DevOps,"AWS, Azure, Docker, Kubernetes, Linux, Terraform",6,1.5,M.Tech,0
+C0669,Healthcare IT,"FHIR, HL7, Java, Python, SQL",5,2.7,M.Tech,1
+C0670,Data & ML,"Excel, Machine Learning, Pandas, Power BI, SQL, TensorFlow",6,0.3,B.Tech,1
+C0671,Mobile Development,"Flutter, Kotlin, Objective-C, React Native, Swift",5,3.1,BCA,1
+C0672,Web Development,"Angular, Django, JavaScript",3,0.0,BCA,1
+C0673,Banking/Fintech Software,"Java, REST APIs, Spring Boot",3,0.5,B.Tech,1
+C0674,Mobile Development,"Objective-C, React Native, Swift",3,7.0,B.Tech,0
+C0675,Banking/Fintech Software,"Core Banking Systems, HIPAA Compliance, Java, REST APIs, SQL, Spring Boot",6,5.1,BCA,0
+C0676,Mobile Development,"Java, Kotlin, Objective-C, React Native, Swift",5,2.0,BCA,0
+C0677,Banking/Fintech Software,"Core Banking Systems, Java, SQL",3,5.0,B.Tech,0
+C0678,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot, Swift",6,3.2,B.Sc,1
+C0679,Web Development,"Angular, CSS, Django, HTML",4,1.6,B.Tech,0
+C0680,Mobile Development,"Flutter, Java, Kotlin, Objective-C",4,4.7,M.Tech,1
+C0681,Cloud & DevOps,"Azure, CI/CD, Docker, Kubernetes, Terraform",5,1.8,BCA,1
+C0682,Mobile Development,"Flutter, Java, Kotlin, Objective-C, Swift",5,1.2,BCA,0
+C0683,Web Development,"HTML, JavaScript, Node.js",3,0.1,B.Tech,0
+C0684,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Python",4,0.5,M.Tech,0
+C0685,Cloud & DevOps,"Azure, CI/CD, Docker, Kubernetes, Linux, Terraform",6,4.3,Diploma,0
+C0686,Healthcare IT,"FHIR, HIPAA Compliance, HL7, SQL",4,3.1,BCA,0
+C0687,Healthcare IT,"FHIR, HIPAA Compliance, Java, Python, SQL",5,4.7,BCA,0
+C0688,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,2.8,B.Tech,0
+C0689,Banking/Fintech Software,"Core Banking Systems, FHIR, Java, REST APIs, SQL, Spring Boot",6,2.5,B.Tech,0
+C0690,Cloud & DevOps,"AWS, Azure, Docker, Terraform",4,2.0,B.Tech,0
+C0691,Cloud & DevOps,"AWS, Azure, Docker, Linux, Terraform",5,0.4,B.Tech,0
+C0692,Web Development,"Angular, CSS, HTML, JavaScript, PHP",5,1.5,B.Tech,0
+C0693,Cloud & DevOps,"AWS, Azure, CI/CD, Linux, Terraform",5,0.5,M.Tech,0
+C0694,Data & ML,"Excel, Pandas, Power BI, SQL",4,0.4,Diploma,0
+C0695,Data & ML,"Excel, Machine Learning, Pandas, Python, TensorFlow",5,1.8,Diploma,0
+C0696,Data & ML,"Excel, SQL, TensorFlow",3,1.0,Diploma,0
+C0697,Mobile Development,"Flutter, Java, Kotlin",3,10.6,MCA,1
+C0698,Cloud & DevOps,"AWS, Docker, Terraform",3,2.4,M.Tech,1
+C0699,Web Development,"CSS, Django, JavaScript, Node.js, React",5,5.5,B.Tech,1
+C0700,Healthcare IT,"HIPAA Compliance, HL7, Java",3,0.6,B.Tech,0
+C0701,Cloud & DevOps,"AWS, Azure, CI/CD, Kubernetes, Linux, Terraform",6,0.8,B.Sc,0
+C0702,Banking/Fintech Software,"Core Banking Systems, Java, Spring Boot",3,2.6,B.Tech,0
+C0703,Web Development,"CSS, JavaScript, Node.js, PHP, React",5,5.1,B.Tech,1
+C0704,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, SQL",5,6.4,BCA,0
+C0705,Data & ML,"Excel, Pandas, SQL, TensorFlow",4,1.9,MCA,0
+C0706,Web Development,"HTML, Node.js, React",3,1.9,M.Tech,0
+C0707,Web Development,"Angular, Django, HTML, Node.js, PHP, React",6,2.7,BCA,0
+C0708,Web Development,"CSS, Django, HTML, JavaScript, PHP",5,6.1,B.Tech,1
+C0709,Data & ML,"Excel, Machine Learning, Pandas, Python, SQL, TensorFlow",6,0.2,BCA,0
+C0710,Healthcare IT,"HL7, Java, Python, SQL",4,8.6,B.Tech,0
+C0711,Cloud & DevOps,"AWS, Azure, CI/CD, Docker, Kubernetes, Linux",6,0.3,MCA,0
+C0712,Data & ML,"Excel, Machine Learning, Pandas, Power BI, SQL",5,1.4,B.Tech,0
+C0713,Web Development,"Angular, Django, HTML, JavaScript, Node.js, PHP",6,1.7,BCA,1
+C0714,Cloud & DevOps,"Azure, CI/CD, Docker, Kubernetes, Linux",5,2.6,B.Sc,1
+C0715,Web Development,"Angular, Django, PHP, React",4,1.8,BCA,0
+C0716,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,9.4,B.Tech,0
+C0717,Data & ML,"Excel, Pandas, Power BI, Python, SQL, TensorFlow",6,0.0,BCA,0
+C0718,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,0.2,B.Sc,0
+C0719,Web Development,"CSS, Node.js, PHP",3,10.7,B.Tech,1
+C0720,Mobile Development,"Java, Kotlin, Objective-C, Swift",4,1.9,BCA,1
+C0721,Web Development,"Angular, CSS, PHP, React",4,2.2,BCA,1
+C0722,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot, Terraform",6,4.9,B.Tech,0
+C0723,Data & ML,"Pandas, Python, SQL",3,4.7,Diploma,0
+C0724,Mobile Development,"Flutter, Java, Kotlin, Objective-C",4,5.3,B.Tech,0
+C0725,Banking/Fintech Software,"Core Banking Systems, Java, SQL",3,1.3,BCA,0
+C0726,Cloud & DevOps,"Docker, Kubernetes, Linux",3,4.2,MCA,1
+C0727,Healthcare IT,"HIPAA Compliance, HL7, Java, Python, SQL",5,6.5,MCA,0
+C0728,Cloud & DevOps,"AWS, Azure, CI/CD, Kubernetes, Linux",5,2.0,B.Tech,0
+C0729,Data & ML,"Machine Learning, Power BI, Python, SQL",4,0.1,B.Tech,0
+C0730,Healthcare IT,"HL7, Java, Python, SQL",4,5.0,Diploma,0
+C0731,Cloud & DevOps,"Docker, Linux, Terraform",3,0.3,B.Sc,1
+C0732,Cloud & DevOps,"AWS, Kubernetes, Linux",3,2.1,MCA,1
+C0733,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,0.5,MCA,1
+C0734,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,0.8,B.Tech,1
+C0735,Healthcare IT,"HL7, Java, Python, SQL",4,0.5,B.Tech,0
+C0736,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL, Spring Boot",5,1.9,B.Tech,1
+C0737,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs",3,0.1,B.Tech,0
+C0738,Mobile Development,"Flutter, Objective-C, React Native",3,0.4,B.Sc,0
+C0739,Web Development,"CSS, Django, HTML, JavaScript",4,1.8,B.Sc,0
+C0740,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Linux, Terraform",6,3.4,B.Tech,1
+C0741,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,1.1,B.Tech,0
+C0742,Data & ML,"Excel, Machine Learning, Power BI, Python, SQL, TensorFlow",6,0.5,MCA,0
+C0743,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, SQL",5,0.5,B.Sc,1
+C0744,Web Development,"Angular, CSS, JavaScript, Node.js, PHP",5,0.2,MCA,0
+C0745,Healthcare IT,"FHIR, HIPAA Compliance, Java, Python, SQL",5,0.6,MCA,1
+C0746,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, Spring Boot",4,3.7,B.Tech,1
+C0747,Healthcare IT,"FHIR, HL7, Java",3,1.2,Diploma,0
+C0748,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,0.3,B.Tech,0
+C0749,Data & ML,"Excel, Machine Learning, Pandas, Power BI, Python",5,6.0,BCA,1
+C0750,Data & ML,"Excel, Machine Learning, Pandas, Power BI, TensorFlow",5,1.7,Diploma,0
+C0751,Web Development,"Angular, CSS, HTML, JavaScript, Node.js, PHP",6,3.4,B.Tech,0
+C0752,Healthcare IT,"HIPAA Compliance, HL7, Python",3,1.5,BCA,1
+C0753,Cloud & DevOps,"CI/CD, Docker, Linux, Terraform",4,0.4,B.Tech,1
+C0754,Cloud & DevOps,"Docker, Linux, Terraform",3,10.1,MCA,1
+C0755,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native",5,8.6,B.Tech,0
+C0756,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, SQL",5,3.1,B.Tech,0
+C0757,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Linux, Terraform",6,1.5,B.Sc,0
+C0758,Banking/Fintech Software,"Core Banking Systems, Java, PHP, REST APIs, SQL, Spring Boot",6,0.7,B.Tech,0
+C0759,Banking/Fintech Software,"Core Banking Systems, Django, Java, REST APIs, SQL, Spring Boot",6,5.9,B.Tech,0
+C0760,Data & ML,"Excel, Machine Learning, Pandas, Power BI, SQL, TensorFlow",6,5.7,B.Tech,1
+C0761,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, SQL",5,3.9,BCA,1
+C0762,Data & ML,"Excel, Machine Learning, Pandas, Power BI, TensorFlow",5,2.8,B.Tech,0
+C0763,Cloud & DevOps,"AWS, Docker, Kubernetes, Linux, Terraform",5,0.4,MCA,1
+C0764,Banking/Fintech Software,"Core Banking Systems, Java, Power BI, REST APIs, SQL, Spring Boot",6,1.5,MCA,0
+C0765,Banking/Fintech Software,"Core Banking Systems, HL7, Java, REST APIs, SQL, Spring Boot",6,0.3,B.Tech,1
+C0766,Cloud & DevOps,"CI/CD, Kubernetes, Linux",3,0.4,M.Tech,0
+C0767,Mobile Development,"Flutter, React Native, Swift",3,3.5,B.Tech,1
+C0768,Data & ML,"Excel, Machine Learning, Power BI, SQL",4,0.1,B.Tech,0
+C0769,Healthcare IT,"HIPAA Compliance, HL7, Python",3,4.0,B.Tech,1
+C0770,Cloud & DevOps,"AWS, Azure, CI/CD, Kubernetes, Linux, Terraform",6,0.0,M.Tech,1
+C0771,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,1.5,MCA,0
+C0772,Data & ML,"Excel, Machine Learning, Pandas, Python, SQL, TensorFlow",6,4.4,M.Tech,1
+C0773,Web Development,"Angular, CSS, HTML, Node.js, PHP",5,2.6,B.Tech,0
+C0774,Healthcare IT,"FHIR, HL7, Java",3,0.4,B.Tech,0
+C0775,Healthcare IT,"FHIR, HIPAA Compliance, SQL",3,1.3,MCA,0
+C0776,Web Development,"Angular, Django, PHP",3,1.4,B.Tech,0
+C0777,Cloud & DevOps,"AWS, Azure, Docker, Kubernetes, Linux, Terraform",6,2.4,B.Sc,1
+C0778,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,6.9,MCA,1
+C0779,Data & ML,"Excel, Machine Learning, Pandas, Power BI, Python, SQL",6,0.7,B.Tech,1
+C0780,Mobile Development,"Java, Objective-C, React Native",3,0.8,B.Tech,0
+C0781,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python",5,0.2,BCA,0
+C0782,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,8.6,MCA,1
+C0783,Banking/Fintech Software,"Core Banking Systems, Java, REST APIs, SQL",4,3.1,BCA,1
+C0784,Web Development,"CSS, PHP, React",3,0.8,B.Tech,0
+C0785,Data & ML,"Machine Learning, Pandas, Python, TensorFlow",4,5.6,B.Tech,0
+C0786,Healthcare IT,"FHIR, HIPAA Compliance, HL7",3,5.0,BCA,0
+C0787,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Linux, Terraform",6,3.1,B.Sc,1
+C0788,Data & ML,"Excel, Power BI, Python, TensorFlow",4,1.0,M.Tech,1
+C0789,Cloud & DevOps,"AWS, Kubernetes, Linux",3,3.5,BCA,1
+C0790,Mobile Development,"Flutter, Java, Kotlin, Objective-C, React Native, Swift",6,3.0,M.Tech,0
+C0791,Healthcare IT,"FHIR, HL7, Python, SQL",4,1.1,MCA,0
+C0792,Banking/Fintech Software,"Core Banking Systems, REST APIs, SQL, Spring Boot",4,3.4,B.Tech,0
+C0793,Cloud & DevOps,"AWS, Azure, CI/CD, Terraform",4,4.3,M.Tech,0
+C0794,Web Development,"Angular, CSS, Django, HTML, Node.js",5,0.1,B.Tech,0
+C0795,Healthcare IT,"FHIR, HIPAA Compliance, HL7, Java, Python, SQL",6,6.8,BCA,0
+C0796,Cloud & DevOps,"AWS, CI/CD, Docker, Kubernetes, Terraform",5,4.7,B.Sc,0
+C0797,Web Development,"Angular, JavaScript, Node.js, PHP",4,0.3,BCA,0
+C0798,Data & ML,"Excel, Machine Learning, Pandas, Power BI, Python, TensorFlow",6,3.7,Diploma,0
+C0799,Healthcare IT,"FHIR, HIPAA Compliance, Java, Python, SQL",5,1.8,Diploma,0
+C0800,Banking/Fintech Software,"Java, REST APIs, SQL, Spring Boot",4,2.9,Diploma,0

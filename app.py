@@ -8,7 +8,7 @@ Three views:
 """
 
 import sys, os
-sys.path.append(os.path.join(os.path.dirname(__file__), "..", "src"))
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 import streamlit as st
 import pandas as pd
@@ -20,7 +20,7 @@ from ats_scorer import score_resume
 
 st.set_page_config(page_title="GenZ Infotech - Talent Match & ATS Tool", layout="wide")
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
+DATA_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # ---------------------------------------------------------
 # Load data & model (cached so it doesn't reload on every interaction)

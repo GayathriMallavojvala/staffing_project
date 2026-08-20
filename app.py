@@ -73,8 +73,73 @@ def build_features(cand_row, job_row):
     return pd.DataFrame([row])[feature_cols], missing, overlap
 
 
-st.title("🎯 IT Candidate-Job Matching & Placement Predictor")
-st.caption("Built for GenZ Infotech's IT Staffing vertical")
+st.title("🎯 TalentMatch AI")
+st.caption("Smart candidate-job matching, placement prediction, and resume intelligence")
+
+# ---------------------------------------------------------
+# Custom styling for match cards (replaces plain dataframe tables)
+# ---------------------------------------------------------
+st.markdown("""
+<style>
+.match-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    border-left: 6px solid #cccccc;
+}
+.match-card.tier-high { border-left-color: #16A34A; }
+.match-card.tier-mid  { border-left-color: #D97706; }
+.match-card.tier-low  { border-left-color: #DC2626; }
+.match-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.match-card-title { font-size: 17px; font-weight: 700; color: #1f2937; }
+.match-score { font-size: 22px; font-weight: 800; }
+.tier-high .match-score { color: #16A34A; }
+.tier-mid  .match-score { color: #D97706; }
+.tier-low  .match-score { color: #DC2626; }
+.progress-track { background: #eee; border-radius: 6px; height: 8px; width: 100%; margin: 6px 0 12px 0; overflow: hidden; }
+.progress-fill { height: 8px; border-radius: 6px; }
+.tier-high .progress-fill { background: #16A34A; }
+.tier-mid  .progress-fill { background: #D97706; }
+.tier-low  .progress-fill { background: #DC2626; }
+.meta-row { font-size: 13px; color: #4b5563; margin-bottom: 8px; }
+.chip { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12px; margin: 2px 4px 2px 0; }
+.chip-match { background: #DCFCE7; color: #166534; }
+.chip-missing { background: #FEE2E2; color: #991B1B; }
+.chip-label { font-size: 12px; font-weight: 600; color: #6b7280; margin-right: 4px; }
+</style>
+""", unsafe_allow_html=True)
+
+
+def tier_for(prob):
+    if prob >= 60:
+        return "tier-high", "Strong Fit"
+    elif prob >= 35:
+        return "tier-mid", "Possible Fit"
+    else:
+        return "tier-low", "Weak Fit"
+
+
+def render_match_card(title, probability, meta_items, matched_skills, missing_skills):
+    tier_class, tier_label = tier_for(probability)
+    matched_html = "".join(f'<span class="chip chip-match">{s}</span>' for s in sorted(matched_skills)) or "<span style='color:#9ca3af;font-size:13px'>None</span>"
+    missing_html = "".join(f'<span class="chip chip-missing">{s}</span>' for s in sorted(missing_skills)) or "<span style='color:#9ca3af;font-size:13px'>None - full match!</span>"
+    meta_html = " &nbsp;|&nbsp; ".join(meta_items)
+
+    html = f"""
+    <div class="match-card {tier_class}">
+        <div class="match-card-header">
+            <div class="match-card-title">{title} &nbsp;<span style="font-size:12px;font-weight:600;color:#6b7280;">({tier_label})</span></div>
+            <div class="match-score">{probability:.1f}%</div>
+        </div>
+        <div class="progress-track"><div class="progress-fill" style="width:{min(probability,100)}%;"></div></div>
+        <div class="meta-row">{meta_html}</div>
+        <div><span class="chip-label">Has:</span>{matched_html}</div>
+        <div style="margin-top:4px;"><span class="chip-label">Missing:</span>{missing_html}</div>
+    </div>
+    """
+    st.markdown(html, unsafe_allow_html=True)
 
 tab1, tab2, tab3 = st.tabs(["👔 Recruiter View", "🧑‍💻 Candidate View", "📄 ATS Resume Scorer"])
 
@@ -83,6 +148,8 @@ tab1, tab2, tab3 = st.tabs(["👔 Recruiter View", "🧑‍💻 Candidate View",
 # ============================================================
 with tab1:
     st.subheader("Find the best-fit candidates for a job")
+    st.write("Select a job below and this ranks every candidate in the pool by their predicted "
+             "placement probability — powered by the Random Forest model we trained on placement history.")
     job_id = st.selectbox(
         "Select a job posting",
         jobs["job_id"],
@@ -101,27 +168,34 @@ with tab1:
         rows = []
         for _, cand_row in candidates.iterrows():
             X, missing, overlap = build_features(cand_row, job_row)
-            prob = model.predict_proba(X)[0, 1]
+            prob = model.predict_proba(X)[0, 1] * 100
             rows.append({
                 "candidate_id": cand_row["candidate_id"],
-                "placement_probability": round(prob * 100, 1),
-                "skill_match": f"{len(overlap)}/{len(overlap)+len(missing)}",
-                "missing_skills": ", ".join(sorted(missing)) if missing else "None",
+                "prob": prob,
+                "missing": missing,
+                "overlap": overlap,
                 "experience_years": cand_row["experience_years"],
                 "education": cand_row["education"],
+                "domain": cand_row["preferred_domain"],
             })
-        results = pd.DataFrame(rows).sort_values("placement_probability", ascending=False).head(15)
-        st.write(f"**Top 15 candidates for {job_id}:**")
-        st.dataframe(
-            results.style.background_gradient(subset=["placement_probability"], cmap="Greens"),
-            use_container_width=True, hide_index=True
-        )
+        rows.sort(key=lambda r: r["prob"], reverse=True)
+        st.write(f"**Top 10 candidates for {job_id}:**")
+        for r in rows[:10]:
+            render_match_card(
+                title=r["candidate_id"],
+                probability=r["prob"],
+                meta_items=[f"{r['experience_years']} yrs exp", r["education"], r["domain"]],
+                matched_skills=r["overlap"],
+                missing_skills=r["missing"],
+            )
 
 # ============================================================
 # TAB 2: Candidate View - pick a candidate, see best-fit jobs
 # ============================================================
 with tab2:
     st.subheader("Find the best-fit jobs for a candidate")
+    st.write("Select a candidate and this ranks every open job by predicted placement probability, "
+             "plus exactly which skills they'd need to close the gap for each one.")
     cand_id = st.selectbox(
         "Select a candidate",
         candidates["candidate_id"],
@@ -140,19 +214,26 @@ with tab2:
         rows = []
         for _, job_row in jobs.iterrows():
             X, missing, overlap = build_features(cand_row, job_row)
-            prob = model.predict_proba(X)[0, 1]
+            prob = model.predict_proba(X)[0, 1] * 100
             rows.append({
                 "job_id": job_row["job_id"],
+                "prob": prob,
+                "missing": missing,
+                "overlap": overlap,
                 "domain": job_row["domain"],
-                "placement_probability": round(prob * 100, 1),
-                "skills_to_gain": ", ".join(sorted(missing)) if missing else "None - full match!",
+                "client_type": job_row["client_type"],
+                "required_experience": job_row["required_experience"],
             })
-        results = pd.DataFrame(rows).sort_values("placement_probability", ascending=False).head(10)
+        rows.sort(key=lambda r: r["prob"], reverse=True)
         st.write(f"**Top 10 job matches for {cand_id}:**")
-        st.dataframe(
-            results.style.background_gradient(subset=["placement_probability"], cmap="Greens"),
-            use_container_width=True, hide_index=True
-        )
+        for r in rows[:10]:
+            render_match_card(
+                title=f"{r['job_id']} — {r['domain']}",
+                probability=r["prob"],
+                meta_items=[r["client_type"], f"{r['required_experience']} yrs required"],
+                matched_skills=r["overlap"],
+                missing_skills=r["missing"],
+            )
 
 # ============================================================
 # TAB 3: ATS Resume Scorer

@@ -52,6 +52,13 @@ def load_model():
 demo_candidates, demo_jobs = load_demo_data()
 model, feature_cols = load_model()
 
+# Pipeline tracker state - lives for the browser session (resets on refresh, which is
+# fine for a demo; a production version would back this with a real database).
+if "pipeline" not in st.session_state:
+    st.session_state.pipeline = []  # list of dicts: candidate, requirement, stage
+
+PIPELINE_STAGES = ["Submitted", "Client Review", "Interview Scheduled", "Interviewed", "Offer Extended", "Placed", "Rejected"]
+
 # ---------------------------------------------------------
 # Styling - enterprise SaaS look: restrained color use, clear hierarchy,
 # a sidebar for branding/navigation instead of everything stacked in the
@@ -319,7 +326,9 @@ def rows_to_csv(rows, id_label="id"):
     return pd.DataFrame(export_rows).to_csv(index=False).encode("utf-8")
 
 
-tab1, tab2, tab3, tab4 = st.tabs(["📋 Shortlist Candidates", "🔍 Job Fit Finder", "📄 ATS Resume Scorer", "⚖️ Compare Candidates"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    "Shortlist Candidates", "Job Fit Finder", "ATS Resume Scorer", "Compare Candidates", "Pipeline & Margin"
+])
 
 # ============================================================
 # TAB 1: Shortlist Candidates (Recruiter View)
@@ -631,3 +640,94 @@ with tab4:
                                 f"({max(score_a,score_b):.1f}% vs {min(score_a,score_b):.1f}%).")
                     else:
                         st.info("**Head-to-head:** Both candidates score equally.")
+
+# ============================================================
+# TAB 5: Pipeline & Margin - the two things a staffing business actually runs on
+# ============================================================
+with tab5:
+    st.subheader("Bill Rate & Margin Calculator")
+    st.caption("What the client pays vs. what the candidate is paid - the margin is the "
+               "staffing company's actual revenue on this placement.")
+
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        bill_rate = st.number_input("Client bill rate (₹/hour)", min_value=0.0, value=1200.0, step=50.0, key="margin_bill")
+    with c2:
+        pay_rate = st.number_input("Candidate pay rate (₹/hour)", min_value=0.0, value=800.0, step=50.0, key="margin_pay")
+    with c3:
+        hours = st.number_input("Billable hours / month", min_value=0.0, value=160.0, step=8.0, key="margin_hours")
+
+    if bill_rate > 0:
+        margin_per_hour = bill_rate - pay_rate
+        margin_pct = (margin_per_hour / bill_rate) * 100 if bill_rate else 0
+        monthly_margin = margin_per_hour * hours
+        annual_margin = monthly_margin * 12
+
+        m1, m2, m3, m4 = st.columns(4)
+        m1.metric("Margin / Hour", f"₹{margin_per_hour:,.0f}")
+        m2.metric("Margin %", f"{margin_pct:.1f}%")
+        m3.metric("Monthly Margin", f"₹{monthly_margin:,.0f}")
+        m4.metric("Annual Margin", f"₹{annual_margin:,.0f}")
+
+        if margin_pct < 15:
+            st.warning(f"Margin is {margin_pct:.1f}% - below the typical 15-25% healthy range for IT "
+                       f"staffing placements. Consider renegotiating the bill rate or candidate pay rate.")
+        elif margin_pct > 40:
+            st.info(f"Margin is {margin_pct:.1f}% - unusually high. Worth checking the bill rate is "
+                    f"market-competitive so the client doesn't churn to a cheaper vendor.")
+        else:
+            st.success(f"Margin is {margin_pct:.1f}% - within a healthy range for IT staffing placements.")
+
+        rate_df = pd.DataFrame({"Rate Type": ["Client Bill Rate", "Candidate Pay Rate"],
+                                 "₹/hour": [bill_rate, pay_rate]}).set_index("Rate Type")
+        st.bar_chart(rate_df, height=220)
+
+    st.markdown("---")
+    st.subheader("Candidate Pipeline Tracker")
+    st.caption("Track candidates through the submission funnel - Submitted → Client Review → "
+               "Interview → Offer → Placed - the same stages a real staffing CRM (Bullhorn, "
+               "JobDiva, Ceipal) tracks.")
+
+    with st.form("pipeline_add_form", clear_on_submit=True):
+        pc1, pc2, pc3 = st.columns(3)
+        with pc1:
+            p_candidate = st.text_input("Candidate name/ID")
+        with pc2:
+            p_requirement = st.text_input("Requirement / Client")
+        with pc3:
+            p_stage = st.selectbox("Current stage", PIPELINE_STAGES)
+        submitted = st.form_submit_button("Add to Pipeline", type="primary")
+        if submitted:
+            if not p_candidate.strip() or not p_requirement.strip():
+                st.warning("Please fill in both candidate and requirement.")
+            else:
+                st.session_state.pipeline.append({
+                    "Candidate": p_candidate.strip(), "Requirement": p_requirement.strip(), "Stage": p_stage
+                })
+                st.success(f"Added {p_candidate} → {p_requirement} ({p_stage})")
+
+    if st.session_state.pipeline:
+        pipeline_df = pd.DataFrame(st.session_state.pipeline)
+
+        stage_counts = pipeline_df["Stage"].value_counts().reindex(PIPELINE_STAGES, fill_value=0)
+        st.write("**Funnel overview:**")
+        st.bar_chart(stage_counts, height=260)
+
+        placed = stage_counts.get("Placed", 0)
+        total = len(pipeline_df)
+        rejected = stage_counts.get("Rejected", 0)
+        active = total - placed - rejected
+        f1, f2, f3, f4 = st.columns(4)
+        f1.metric("Total in Pipeline", total)
+        f2.metric("Active", active)
+        f3.metric("Placed", placed)
+        f4.metric("Conversion Rate", f"{(placed/total*100 if total else 0):.0f}%")
+
+        st.write("**All pipeline entries:**")
+        st.dataframe(pipeline_df, width="stretch", hide_index=True)
+
+        if st.button("Clear Pipeline", key="clear_pipeline"):
+            st.session_state.pipeline = []
+            st.rerun()
+    else:
+        st.info("No candidates in the pipeline yet - add one above to see the funnel view.")

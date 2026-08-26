@@ -67,7 +67,26 @@ KNOWN_PHRASES = [
     "core banking", "ci/cd", "cloud computing", "big data", "data engineering",
     "software development", "agile methodology", "version control", "unit testing",
     "object oriented programming", "database management", "data structures",
+    "project management", "business intelligence", "hypothesis testing",
+    "feature engineering", "a/b testing", "react native", "node.js",
 ]
+
+# Curated technical/professional skill & tool vocabulary. Final keywords are
+# ONLY ever pulled from this list or KNOWN_PHRASES above - never from raw word
+# frequency. This is a deliberate precision-over-recall choice: a shorter,
+# 100%-relevant keyword list is more useful to a recruiter than a longer list
+# padded with generic English words like "find", "like", or "managers".
+SKILL_VOCABULARY = set("""
+python sql java javascript typescript php ruby golang rust swift kotlin scala
+matlab html css react angular vue django flask spring excel tableau looker
+pandas numpy tensorflow pytorch keras opencv nltk spacy hadoop spark kafka
+airflow dbt snowflake redshift postgresql mysql mongodb oracle sqlite nosql
+aws azure gcp docker kubernetes terraform ansible jenkins git github gitlab
+linux unix bash devops api graphql microservices statistics forecasting
+optimization etl jira confluence salesforce sap sas hipaa hl7 fhir
+blockchain cybersecurity networking flutter selenium pytest junit unity
+scikit-learn scikitlearn r c c++ c#
+""".split())
 
 
 # ---------------------------------------------------------
@@ -123,40 +142,36 @@ def extract_text(file_path):
 # 2. Keyword extraction from job description
 # ---------------------------------------------------------
 def extract_keywords(job_description, top_n=20):
-    """Pull the most meaningful keywords/phrases out of a job description.
+    """Pull skill/tool keywords out of a job description.
 
-    Multi-word technical terms (e.g. "machine learning") are matched against a
-    curated phrase list rather than naive adjacent-word pairing, which avoids
-    producing meaningless bigrams like "power pandas" from words that just
-    happen to sit next to each other. We also run the same squished-word fix
-    used for PDF resumes, since job descriptions pasted from certain web pages
-    often lose spaces between sections (e.g. "ResponsibilitiesData").
+    Deliberately precision-first: keywords are ONLY accepted if they match our
+    curated SKILL_VOCABULARY or KNOWN_PHRASES list - never from raw word
+    frequency. An earlier version extracted "frequent words" instead of "real
+    skills" and surfaced generic English words like "find", "like", "managers"
+    just because they appeared often in JD prose. A recruiter needs a keyword
+    list they can trust is actually made of skills, not JD filler.
     """
     job_description = _fix_squished_words(job_description)
     text_lower = job_description.lower()
 
-    # 1. Detect known multi-word phrases first, and remove them from the text
-    #    so their component words aren't double-counted as separate unigrams.
+    # 1. Known multi-word phrases first (higher signal than single words)
     found_phrases = [p for p in KNOWN_PHRASES if p in text_lower]
     for phrase in found_phrases:
         text_lower = text_lower.replace(phrase, " ")
 
-    # 2. Extract single-word keywords from what remains
-    # Replace punctuation with a SPACE (not delete it) - otherwise sentences
+    # 2. Single-word skills - only accepted if in our curated vocabulary.
+    # Punctuation is replaced with a SPACE (not deleted) - otherwise sentences
     # like "field.Soft Skills" (no space after the period, common in text
-    # copied from web pages) get fused into "fieldsoft" once the period is
-    # simply removed.
+    # copied from web pages) get fused into "fieldsoft".
     punct_to_space = str.maketrans(
         string.punctuation.replace("+", "").replace("#", ""),
         " " * len(string.punctuation.replace("+", "").replace("#", ""))
     )
     text_clean = text_lower.translate(punct_to_space)
-    words = [w for w in text_clean.split() if w not in STOPWORDS and len(w) > 2]
-    freq = Counter(words)
-    top_unigrams = [kw for kw, _ in freq.most_common(top_n)]
+    words = text_clean.split()
+    found_skills = [w for w in dict.fromkeys(words) if w in SKILL_VOCABULARY]  # dedupe, keep order
 
-    # phrases first (they're higher-signal), then unigrams, capped at top_n total
-    combined = found_phrases + [w for w in top_unigrams if w not in found_phrases]
+    combined = found_phrases + found_skills
     return combined[:top_n]
 
 

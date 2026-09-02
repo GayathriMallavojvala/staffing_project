@@ -209,28 +209,103 @@ def score_sections(resume_text):
     return score, found_sections, missing_sections
 
 
+CONTACT_LINE_PATTERN = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+|\+?\d[\d\-\s]{8,}\d")
+
+SECTION_HEADER_TRIGGERS = {
+    "experience": ["experience", "work experience", "professional experience", "employment history", "work history"],
+    "skills": ["skills", "technical skills", "core competencies", "technologies"],
+    "education": ["education", "academic background"],
+    "projects": ["projects", "project experience", "academic projects"],
+    "certifications": ["certifications", "certificates", "licenses"],
+}
+
+
+def classify_lines_by_section(resume_text):
+    """Tag each line with which resume section it likely belongs to, by detecting
+    header lines (short lines matching common section-title phrasing). This lets
+    quantification/action-verb checks look only at Experience/Projects lines -
+    treating a skills list or a contact line as if it were an "achievement bullet"
+    (an earlier bug) produced nonsense suggestions like asking someone to add a
+    metric to their email address.
+    """
+    lines = [l.strip() for l in resume_text.split("\n")]
+    current = None
+    classified = []
+    for line in lines:
+        if not line:
+            continue
+        low = line.lower().strip(":").strip()
+        matched_header = None
+        if len(line.split()) <= 4:
+            for sec, triggers in SECTION_HEADER_TRIGGERS.items():
+                if low in triggers:
+                    matched_header = sec
+                    break
+        if matched_header:
+            current = matched_header
+            continue  # the header line itself isn't content
+        classified.append((line, current))
+    return classified
+
+
+def get_bullet_candidate_lines(resume_text):
+    """Lines worth checking for quantification/action-verb quality: content under
+    Experience or Projects, excluding contact-info lines. Falls back to the old
+    broad heuristic (any sufficiently long line) if section headers couldn't be
+    detected at all, so atypically-formatted resumes still get scored.
+    """
+    classified = classify_lines_by_section(resume_text)
+    targeted = [line for line, sec in classified
+                if sec in ("experience", "projects") and len(line) > 15
+                and not CONTACT_LINE_PATTERN.search(line)]
+    if targeted:
+        return targeted
+    # fallback: no recognizable section headers found at all
+    return [line for line, _ in classified if len(line) > 15 and not CONTACT_LINE_PATTERN.search(line)]
+
+
 def score_quantification(resume_text):
-    lines = [l.strip() for l in resume_text.split("\n") if l.strip()]
-    bullet_lines = [l for l in lines if len(l) > 15]  # rough proxy for content lines
+    bullet_lines = get_bullet_candidate_lines(resume_text)
     if not bullet_lines:
-        return 0, 0, 0
+        return 0, 0, 0, []
     quantified = [l for l in bullet_lines if re.search(r"\d+%|\$\d+|\d+x|\d+\+|\b\d{2,}\b", l)]
+    unquantified = [l for l in bullet_lines if l not in quantified]
     ratio = len(quantified) / len(bullet_lines)
-    return ratio, len(quantified), len(bullet_lines)
+    return ratio, len(quantified), len(bullet_lines), unquantified
 
 
 def score_action_verbs(resume_text):
-    lines = [l.strip().lower() for l in resume_text.split("\n") if len(l.strip()) > 15]
+    lines = get_bullet_candidate_lines(resume_text)
     if not lines:
-        return 0, 0
-    # strip leading bullet characters (•, -, *, etc.) before checking the first word,
-    # otherwise every bullet line's "first word" is just the bullet symbol
-    cleaned_lines = [l.lstrip("•-*·▪◦ \t") for l in lines]
-    cleaned_lines = [l for l in cleaned_lines if l]
-    strong_start = sum(1 for l in cleaned_lines if l.split() and l.split()[0] in ACTION_VERBS)
-    weak_count = sum(1 for l in lines for phrase in WEAK_PHRASES if phrase in l)
-    ratio = strong_start / len(cleaned_lines) if cleaned_lines else 0
-    return ratio, weak_count
+        return 0, 0, []
+    cleaned_pairs = [(l, l.lstrip("•-*·▪◦ \t")) for l in lines]
+    cleaned_pairs = [(orig, cl) for orig, cl in cleaned_pairs if cl]
+    strong_start = [orig for orig, cl in cleaned_pairs if cl.split() and cl.split()[0].lower() in ACTION_VERBS]
+    weak_lines = [orig for orig, cl in cleaned_pairs
+                  if not (cl.split() and cl.split()[0].lower() in ACTION_VERBS)]
+    weak_phrase_lines = [orig for orig, cl in cleaned_pairs
+                          for phrase in WEAK_PHRASES if phrase in cl.lower()]
+    ratio = len(strong_start) / len(cleaned_pairs) if cleaned_pairs else 0
+    return ratio, len(weak_phrase_lines), weak_lines
+
+
+def check_contact_info(resume_text):
+    """Real ATS systems reject resumes where basic contact info can't be parsed."""
+    issues = []
+    if not re.search(r"[\w.+-]+@[\w-]+\.[\w.-]+", resume_text):
+        issues.append("No email address detected - ATS systems and recruiters both need this to reach you.")
+    if not re.search(r"(\+?\d[\d\-\s]{8,}\d)", resume_text):
+        issues.append("No phone number detected in a standard format.")
+    return issues
+
+
+def check_length(resume_text):
+    word_count = len(resume_text.split())
+    if word_count < 150:
+        return word_count, "Resume looks very short (under 150 words) - ATS systems and recruiters may read this as underqualified or incomplete, even if the content is strong."
+    if word_count > 1000:
+        return word_count, "Resume looks long (over 1000 words) - for most roles, 1-2 pages is the sweet spot; consider trimming older or less relevant experience."
+    return word_count, None
 
 
 # ---------------------------------------------------------
@@ -242,30 +317,64 @@ def score_resume(file_path, job_description):
 
     kw_match, found_kw, missing_kw = score_keyword_match(resume_text, keywords)
     sec_score, found_sec, missing_sec = score_sections(resume_text)
-    quant_ratio, n_quant, n_bullets = score_quantification(resume_text)
-    verb_ratio, weak_count = score_action_verbs(resume_text)
+    quant_ratio, n_quant, n_bullets, unquantified_lines = score_quantification(resume_text)
+    verb_ratio, weak_phrase_count, weak_verb_lines = score_action_verbs(resume_text)
+    contact_issues = check_contact_info(resume_text)
+    word_count, length_issue = check_length(resume_text)
 
     final_score = round(
         (kw_match * 0.50 + sec_score * 0.20 + quant_ratio * 0.15 + verb_ratio * 0.15) * 100, 1
     )
 
-    # ---- Build actionable suggestions ----
-    suggestions = []
+    # ---- Build specific, prioritized, example-driven suggestions ----
+    # Each suggestion is (priority, text) - priority 1 = fix this first (biggest score impact).
+    scored_suggestions = []
+
     if missing_kw:
-        suggestions.append(f"Add these missing keywords if relevant to your experience: {', '.join(missing_kw[:8])}")
+        impact = round((len(missing_kw) / len(keywords)) * 50) if keywords else 0
+        scored_suggestions.append((1,
+            f"**Keywords ({impact} points on the table):** add these if genuinely part of your experience — "
+            f"{', '.join(missing_kw[:8])}. This is the single biggest lever on your score; keyword match is "
+            f"weighted 50%."))
+
     if missing_sec:
-        suggestions.append(f"Your resume is missing these sections: {', '.join(missing_sec)}")
-    if quant_ratio < 0.3:
-        suggestions.append("Add numbers to your bullet points (e.g. 'improved load time by 40%') — only "
-                            f"{n_quant}/{n_bullets} lines currently have measurable impact.")
-    if verb_ratio < 0.3:
-        suggestions.append("Start more bullet points with strong action verbs (Built, Led, Optimized, "
-                            "Automated) instead of passive phrasing.")
-    if weak_count > 0:
-        suggestions.append(f"Replace weak phrases like 'responsible for' / 'worked on' found in {weak_count} "
-                            "line(s) with specific accomplishments.")
+        scored_suggestions.append((1,
+            f"**Missing section(s):** add a clearly labeled {', '.join(missing_sec)} section. ATS parsers "
+            f"look for these exact headers to categorize your content — without them, correctly-written "
+            f"content can still get mis-filed or ignored."))
+
+    if unquantified_lines:
+        examples = unquantified_lines[:3]
+        example_text = "\n".join(f'  - "{e[:90]}{"..." if len(e) > 90 else ""}"' for e in examples)
+        scored_suggestions.append((2,
+            f"**Quantify your impact ({n_quant}/{n_bullets} lines have numbers):** these lines could use a "
+            f"metric (%, count, $, time saved):\n{example_text}\n"
+            f"  Rewrite pattern: \"[Did X] resulting in [Y% / $Y / Y hours saved]\"."))
+
+    if weak_verb_lines:
+        examples = weak_verb_lines[:3]
+        example_text = "\n".join(f'  - "{e[:90]}{"..." if len(e) > 90 else ""}"' for e in examples)
+        scored_suggestions.append((2,
+            f"**Weak opening verbs ({verb_ratio*100:.0f}% of lines start strong):** these lines don't open "
+            f"with an action verb:\n{example_text}\n"
+            f"  Try opening with: Built, Led, Designed, Automated, Reduced, Improved, Delivered."))
+
+    if contact_issues:
+        for issue in contact_issues:
+            scored_suggestions.append((1, f"**Contact info:** {issue}"))
+
+    if length_issue:
+        scored_suggestions.append((3, f"**Length ({word_count} words):** {length_issue}"))
+
+    scored_suggestions.sort(key=lambda x: x[0])
+    suggestions = [text for _, text in scored_suggestions]
+
     if not suggestions:
-        suggestions.append("Strong resume! Keyword coverage, structure, and impact statements all look solid.")
+        suggestions = ["Strong resume — keyword coverage, structure, quantified impact, and contact "
+                        "info all look solid for this job description."]
+
+    # Top-3 quick-priority summary for at-a-glance action
+    top_priority = suggestions[:3] if len(suggestions) > 1 else []
 
     return {
         "ats_score": final_score,
@@ -276,6 +385,9 @@ def score_resume(file_path, job_description):
         "sections_missing": missing_sec,
         "quantified_bullets": f"{n_quant}/{n_bullets}",
         "action_verb_ratio": round(verb_ratio * 100, 1),
+        "word_count": word_count,
+        "contact_issues": contact_issues,
+        "top_priority_fixes": top_priority,
         "suggestions": suggestions,
     }
 

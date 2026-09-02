@@ -28,7 +28,7 @@ import joblib
 import tempfile
 
 from ats_scorer import score_resume, extract_keywords
-from resume_builder import build_resume_docx
+from resume_builder import build_resume_docx, build_resume_pdf, render_resume_html, THEMES
 
 st.set_page_config(page_title="SkillBridge - Staffing Intelligence Suite", layout="wide", page_icon="🌉")
 
@@ -552,10 +552,12 @@ with tab3:
             st.write("**Missing keywords:**", ", ".join(result["missing_keywords"]) or "None")
             if result["sections_missing"]:
                 st.write("**Missing sections:**", ", ".join(result["sections_missing"]))
+            st.caption(f"{result['word_count']} words")
 
             st.write("### Recommendations")
             for s in result["suggestions"]:
-                st.write(f"- {s}")
+                st.markdown(s)
+                st.markdown("")
 
 # ============================================================
 # TAB 4: Compare Candidates side-by-side
@@ -740,135 +742,152 @@ with tab5:
     else:
         st.info("No candidates in the pipeline yet - add one above to see the funnel view.")
 
+
 # ============================================================
-# TAB 6: Resume Builder - generates an ATS-friendly resume, then scores it
-# with our own ATS scorer to prove the score, not just claim it.
+# TAB 6: Resume Builder - live preview (updates as you type, like Overleaf)
+# + a real typeset PDF export, scored live with our own ATS scorer.
 # ============================================================
 with tab6:
     st.subheader("Resume Builder")
-    st.caption("Generates a clean, single-column .docx built to the same rules our ATS Scorer checks "
-               "for - correct section headers, no tables/text boxes (a common reason ATS systems fail "
-               "to parse a resume at all), and keyword coverage against a target role.")
+    st.caption("Fill in the form on the left - the preview on the right updates as you go. "
+               "Export produces a properly typeset PDF (not just a plain text dump), built to "
+               "the same rules our ATS Scorer checks for.")
 
-    st.markdown("**Personal details**")
-    p1, p2 = st.columns(2)
-    with p1:
-        rb_name = st.text_input("Full name", key="rb_name")
-        rb_email = st.text_input("Email", key="rb_email")
-    with p2:
-        rb_phone = st.text_input("Phone", key="rb_phone")
-        rb_linkedin = st.text_input("LinkedIn (optional)", key="rb_linkedin")
+    form_col, preview_col = st.columns([1, 1], gap="large")
 
-    rb_target_jd = st.text_area("Target job description (optional, but strongly recommended)", height=120,
-                                 key="rb_jd", placeholder="Paste the job description you're applying to - "
-                                 "this tunes keyword suggestions and lets us show your live ATS score.")
+    with form_col:
+        rb_theme = st.selectbox("Template theme", list(THEMES.keys()), key="rb_theme")
 
-    if rb_target_jd.strip():
-        suggested_skills = extract_keywords(rb_target_jd, top_n=15)
-        if suggested_skills:
-            st.info(f"**Skills detected in this JD** (include any you genuinely have): {', '.join(suggested_skills)}")
+        st.markdown("**Personal details**")
+        p1, p2 = st.columns(2)
+        with p1:
+            rb_name = st.text_input("Full name", key="rb_name")
+            rb_email = st.text_input("Email", key="rb_email")
+        with p2:
+            rb_phone = st.text_input("Phone", key="rb_phone")
+            rb_linkedin = st.text_input("LinkedIn (optional)", key="rb_linkedin")
 
-    rb_summary = st.text_area("Professional summary (2-3 lines)", height=80, key="rb_summary",
-                               placeholder="e.g. Data Analyst with experience in Python, SQL, and Power BI...")
-    rb_skills = st.text_area("Skills (comma-separated)", height=70, key="rb_skills",
-                              placeholder="Python, SQL, Power BI, Excel")
+        rb_target_jd = st.text_area("Target job description (optional, but recommended)", height=100,
+                                     key="rb_jd", placeholder="Paste the job description you're applying to.")
+
+        if rb_target_jd.strip():
+            suggested_skills = extract_keywords(rb_target_jd, top_n=15)
+            if suggested_skills:
+                st.info(f"**Skills detected in this JD** (include any you genuinely have): {', '.join(suggested_skills)}")
+
+        rb_summary = st.text_area("Professional summary (2-3 lines)", height=70, key="rb_summary")
+        rb_skills = st.text_area("Skills (comma-separated)", height=60, key="rb_skills",
+                                  placeholder="Python, SQL, Power BI, Excel")
+
+        st.markdown("---")
+        st.markdown("**Experience**")
+        with st.form("rb_exp_form", clear_on_submit=True):
+            e1, e2, e3 = st.columns(3)
+            with e1:
+                exp_title = st.text_input("Job title")
+            with e2:
+                exp_company = st.text_input("Company")
+            with e3:
+                exp_dates = st.text_input("Dates")
+            exp_bullets = st.text_area("Achievements (one per line - include numbers where possible)", height=90)
+            if st.form_submit_button("Add Experience Entry"):
+                if exp_title.strip() and exp_company.strip():
+                    st.session_state.builder_experience.append({
+                        "title": exp_title.strip(), "company": exp_company.strip(), "dates": exp_dates.strip(),
+                        "bullets": [b.strip() for b in exp_bullets.split("\n") if b.strip()]
+                    })
+                    st.success(f"Added: {exp_title} at {exp_company}")
+                else:
+                    st.warning("Job title and company are required.")
+
+        if st.session_state.builder_experience:
+            for exp in st.session_state.builder_experience:
+                st.write(f"- **{exp['title']}** at {exp['company']} ({exp['dates']}) - {len(exp['bullets'])} bullet(s)")
+            if st.button("Clear experience entries", key="rb_clear_exp"):
+                st.session_state.builder_experience = []
+                st.rerun()
+
+        st.markdown("---")
+        st.markdown("**Education**")
+        with st.form("rb_edu_form", clear_on_submit=True):
+            d1, d2, d3, d4 = st.columns(4)
+            with d1:
+                edu_degree = st.text_input("Degree")
+            with d2:
+                edu_institution = st.text_input("Institution")
+            with d3:
+                edu_year = st.text_input("Year")
+            with d4:
+                edu_score = st.text_input("CGPA/Score")
+            if st.form_submit_button("Add Education Entry"):
+                if edu_degree.strip() and edu_institution.strip():
+                    st.session_state.builder_education.append({
+                        "degree": edu_degree.strip(), "institution": edu_institution.strip(),
+                        "year": edu_year.strip(), "score": edu_score.strip()
+                    })
+                    st.success(f"Added: {edu_degree}, {edu_institution}")
+                else:
+                    st.warning("Degree and institution are required.")
+
+        if st.session_state.builder_education:
+            for edu in st.session_state.builder_education:
+                st.write(f"- {edu['degree']}, {edu['institution']} ({edu['year']})")
+            if st.button("Clear education entries", key="rb_clear_edu"):
+                st.session_state.builder_education = []
+                st.rerun()
+
+        st.markdown("---")
+        rb_certs = st.text_area("Certifications (one per line, optional)", height=60, key="rb_certs")
+
+    # Build the data dict once, used by both the live preview and the export
+    rb_data = {
+        "name": st.session_state.get("rb_name", ""), "email": st.session_state.get("rb_email", ""),
+        "phone": st.session_state.get("rb_phone", ""), "linkedin": st.session_state.get("rb_linkedin", ""),
+        "summary": st.session_state.get("rb_summary", ""),
+        "skills": [s.strip() for s in st.session_state.get("rb_skills", "").split(",") if s.strip()],
+        "experience": st.session_state.builder_experience,
+        "education": st.session_state.builder_education,
+        "certifications": [c.strip() for c in st.session_state.get("rb_certs", "").split("\n") if c.strip()],
+    }
+
+    with preview_col:
+        st.markdown("**Live Preview**")
+        st.markdown(render_resume_html(rb_data, theme=rb_theme), unsafe_allow_html=True)
 
     st.markdown("---")
-    st.markdown("**Experience**")
-    with st.form("rb_exp_form", clear_on_submit=True):
-        e1, e2, e3 = st.columns(3)
-        with e1:
-            exp_title = st.text_input("Job title")
-        with e2:
-            exp_company = st.text_input("Company")
-        with e3:
-            exp_dates = st.text_input("Dates (e.g. Jan 2025 - Jun 2025)")
-        exp_bullets = st.text_area("Achievements (one per line - include numbers where possible, "
-                                    "e.g. 'Improved load time by 40%')", height=100)
-        if st.form_submit_button("Add Experience Entry"):
-            if exp_title.strip() and exp_company.strip():
-                st.session_state.builder_experience.append({
-                    "title": exp_title.strip(), "company": exp_company.strip(), "dates": exp_dates.strip(),
-                    "bullets": [b.strip() for b in exp_bullets.split("\n") if b.strip()]
-                })
-                st.success(f"Added: {exp_title} at {exp_company}")
-            else:
-                st.warning("Job title and company are required.")
-
-    if st.session_state.builder_experience:
-        for i, exp in enumerate(st.session_state.builder_experience):
-            st.write(f"- **{exp['title']}** at {exp['company']} ({exp['dates']}) - {len(exp['bullets'])} bullet(s)")
-        if st.button("Clear experience entries", key="rb_clear_exp"):
-            st.session_state.builder_experience = []
-            st.rerun()
-
-    st.markdown("---")
-    st.markdown("**Education**")
-    with st.form("rb_edu_form", clear_on_submit=True):
-        d1, d2, d3, d4 = st.columns(4)
-        with d1:
-            edu_degree = st.text_input("Degree")
-        with d2:
-            edu_institution = st.text_input("Institution")
-        with d3:
-            edu_year = st.text_input("Year")
-        with d4:
-            edu_score = st.text_input("CGPA/Score")
-        if st.form_submit_button("Add Education Entry"):
-            if edu_degree.strip() and edu_institution.strip():
-                st.session_state.builder_education.append({
-                    "degree": edu_degree.strip(), "institution": edu_institution.strip(),
-                    "year": edu_year.strip(), "score": edu_score.strip()
-                })
-                st.success(f"Added: {edu_degree}, {edu_institution}")
-            else:
-                st.warning("Degree and institution are required.")
-
-    if st.session_state.builder_education:
-        for edu in st.session_state.builder_education:
-            st.write(f"- {edu['degree']}, {edu['institution']} ({edu['year']})")
-        if st.button("Clear education entries", key="rb_clear_edu"):
-            st.session_state.builder_education = []
-            st.rerun()
-
-    st.markdown("---")
-    rb_certs = st.text_area("Certifications (one per line, optional)", height=70, key="rb_certs")
-
-    st.markdown("---")
-    if st.button("Generate Resume", type="primary", key="rb_generate"):
-        if not rb_name.strip() or not rb_skills.strip():
+    if st.button("Generate & Export", type="primary", key="rb_generate"):
+        if not rb_data["name"].strip() or not rb_data["skills"]:
             st.warning("At minimum, please enter your name and skills.")
         else:
-            data = {
-                "name": rb_name.strip(), "email": rb_email.strip(), "phone": rb_phone.strip(),
-                "linkedin": rb_linkedin.strip(), "summary": rb_summary.strip(),
-                "skills": [s.strip() for s in rb_skills.split(",") if s.strip()],
-                "experience": st.session_state.builder_experience,
-                "education": st.session_state.builder_education,
-                "certifications": [c.strip() for c in rb_certs.split("\n") if c.strip()],
-            }
-            out_path = os.path.join(tempfile.gettempdir(), f"resume_{rb_name.strip().replace(' ', '_')}.docx")
-            build_resume_docx(data, out_path)
+            base_name = rb_data["name"].strip().replace(" ", "_") or "resume"
+            pdf_path = os.path.join(tempfile.gettempdir(), f"{base_name}.pdf")
+            docx_path = os.path.join(tempfile.gettempdir(), f"{base_name}.docx")
+            build_resume_pdf(rb_data, pdf_path, theme=rb_theme)
+            build_resume_docx(rb_data, docx_path)
 
-            with open(out_path, "rb") as f:
-                resume_bytes = f.read()
-            st.download_button("⬇️ Download Resume (.docx)", resume_bytes,
-                                file_name=f"{rb_name.strip().replace(' ', '_')}_Resume.docx",
-                                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+            dl1, dl2 = st.columns(2)
+            with open(pdf_path, "rb") as f:
+                dl1.download_button("⬇️ Download PDF", f.read(), file_name=f"{base_name}_Resume.pdf", mime="application/pdf")
+            with open(docx_path, "rb") as f:
+                dl2.download_button("⬇️ Download DOCX (editable)", f.read(), file_name=f"{base_name}_Resume.docx",
+                                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
 
             if rb_target_jd.strip():
-                result = score_resume(out_path, rb_target_jd)
+                result = score_resume(pdf_path, rb_target_jd)
                 st.write(f"### Live ATS Score: {result['ats_score']}/100")
                 sc1, sc2, sc3, sc4 = st.columns(4)
                 sc1.metric("Keyword Match", f"{result['keyword_match_pct']}%")
                 sc2.metric("Quantified Bullets", result["quantified_bullets"])
                 sc3.metric("Action Verb Usage", f"{result['action_verb_ratio']}%")
                 sc4.metric("Sections Found", f"{len(result['sections_found'])}/6")
-                if result["missing_keywords"]:
-                    st.write("**Consider adding (if genuinely applicable):**", ", ".join(result["missing_keywords"]))
-                for s in result["suggestions"]:
-                    st.write(f"- {s}")
+                if result.get("top_priority_fixes"):
+                    st.write("**Top priority fixes:**")
+                    for s in result["top_priority_fixes"]:
+                        st.markdown(s)
+                else:
+                    st.success("No major issues found against this job description.")
             else:
                 st.caption("Paste a target job description above and regenerate to see a live ATS score.")
 
-            os.unlink(out_path)
+            os.unlink(pdf_path)
+            os.unlink(docx_path)

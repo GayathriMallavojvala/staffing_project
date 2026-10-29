@@ -1,0 +1,34 @@
+/* SkillBridge visual refresh — layout and appearance only */
+:root { --sb-ink:#13233b; --sb-blue:#5269e8; --sb-border:#e2e9f3; }
+.stApp {background:linear-gradient(160deg,#f4f7fc 0%,#ffffff 55%,#f8faff 100%);}
+.block-container {padding-top:1.4rem; padding-bottom:4rem; max-width:1440px;}
+[data-testid="stSidebar"] {background:#f8faff; border-right:1px solid #e2e8f3;}
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p {line-height:1.5;}
+[data-testid="stSidebar"] [data-testid="stExpander"] {border-radius:12px;}
+h1,h2,h3 {color:#162744; letter-spacing:-.025em;}
+h3 {margin-top:1.1rem;}
+.sb-hero {background:radial-gradient(circle at 94% 8%,#566bdb 0%,transparent 31%),linear-gradient(115deg,#14264b 0%,#243f83 60%,#304d9d 100%);border:1px solid #d2daf0;box-shadow:0 18px 35px rgba(24,49,105,.11);border-radius:22px;padding:34px 38px;margin:4px 0 22px;color:white;}
+.sb-eyebrow {font-size:11px;letter-spacing:.16em;font-weight:750;color:#b5d1ff;}
+.sb-dot {display:inline-block;height:5px;width:5px;border-radius:50%;background:#6be4b1;margin:0 5px 2px;}
+.sb-hero-title {font-size:clamp(28px,3.3vw,44px);font-weight:780;line-height:1.12;letter-spacing:-.045em;margin:15px 0 12px;color:#fff;}
+.sb-accent {color:#8de8c8;}
+.sb-hero-text {font-size:15px;max-width:680px;color:#d8e3fc;line-height:1.65;}
+.sb-hero-foot {display:flex;flex-wrap:wrap;gap:12px 24px;color:#c0d6ff;font-size:12px;margin-top:24px;}
+.kpi-box {background:#fff;border:1px solid var(--sb-border);border-radius:15px;padding:17px 20px;box-shadow:0 5px 20px rgba(31,63,125,.045);min-height:86px;}
+.kpi-value {color:#182e51;font-size:23px;letter-spacing:-.025em;overflow-wrap:anywhere;}
+.kpi-label {color:#65748d;font-size:12px;}
+.sb-workspace-label {color:#677992;font-weight:750;font-size:11px;letter-spacing:.13em;margin-top:22px;margin-bottom:14px;}
+[data-testid="stTabs"] [data-baseweb="tab-list"] {gap:7px;overflow-x:auto;padding-bottom:10px;}
+[data-testid="stTabs"] button[data-baseweb="tab"] {background:#fff;border:1px solid #e0e7f2;border-radius:11px;padding:9px 15px;color:#4a5d77;font-weight:650;white-space:nowrap;}
+[data-testid="stTabs"] button[aria-selected="true"] {background:#eaf0ff;color:#234bc1;border-color:#afc4fb;}
+[data-testid="stTabs"] [data-baseweb="tab-highlight"] {display:none;}
+[data-testid="stTabs"] [data-baseweb="tab-panel"] {padding-top:1.1rem;}
+[data-testid="stMetric"] {background:#fff;border:1px solid #e6ecf5;padding:15px;border-radius:12px;}
+[data-testid="stFileUploader"], [data-testid="stDataFrame"] {border-radius:12px;}
+.match-card {border-color:#e1e9f3;border-radius:14px;box-shadow:0 4px 14px rgba(28,53,111,.04);transition:box-shadow .16s ease;}
+.match-card:hover {box-shadow:0 8px 22px rgba(28,53,111,.09);}
+.explanation-row {background:#f2f6fd;border-radius:9px;}
+div.stButton > button[kind="primary"],div.stButton > button {background:#324db5;border-radius:10px;min-height:41px;}
+div.stButton > button:hover {background:#263e9d;}
+[data-testid="stDownloadButton"] button {border-radius:10px;}
+@media(max-width:850px){.sb-hero{padding:24px 22px;border-radius:16px}.sb-hero-foot{gap:8px 13px}.block-container{padding-top:.75rem}.kpi-box{padding:12px}.kpi-value{font-size:17px}}
